@@ -1,46 +1,85 @@
 import React from 'react';
 import classes from './App.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl'
-import Button from 'react-bootstrap/Button';
+import Head from './component/Head';
+import Slideshow from './component/Slideshow';
 import Image from 'react-bootstrap/Image';
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 
 
 function App() {
   return (
     <div className={classes.app}>
-      
-        <Navbar bg="info" variant="dark" expand="lg">
-          <Navbar.Brand href="#home">
-            <Image 
-              src="https://i.postimg.cc/LXFvm9Dh/8rgt-n9jh-130928.jpg" 
-              width="50"
-              height="50" 
-              roundedCircle 
-            />
-             <span className={classes.brand__text}>Le Agavi del Golfo</span>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
+      <Head/>
+      <body>
+        <Slideshow/>
+        
+        <Container fluid className={classes.highlightStrip}>
+          <Row>
+            <Col lg={4}>
+              <Image 
+                className={classes.highlightStrip__image} 
+                src="https://i.postimg.cc/Kj9gnWvG/106517390-2.jpg" 
+                roundedCircle
+                />
+              <Card bg="light">
+                  <Card.Body>
+                  <Card.Title>Special title treatment</Card.Title>
+                  <Card.Text>
+                    With supporting text below as a natural lead-in to additional content.
+                  </Card.Text>
+                  <Button variant="primary">Go somewhere</Button>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg={4}>
+              <Image className={classes.highlightStrip__image}
+                src="https://i.postimg.cc/Kj9gnWvG/106517390-2.jpg" 
+                roundedCircle
+                />
+              <Card>
+                  <Card.Body>
+                  <Card.Title>Special title treatment</Card.Title>
+                  <Card.Text>
+                    With supporting text below as a natural lead-in to additional content.
+                  </Card.Text>
+                  <Button variant="primary">Go somewhere</Button>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg={4}>
+              <Image 
+                className={classes.highlightStrip__image}
+                src="https://i.postimg.cc/Kj9gnWvG/106517390-2.jpg" 
+                roundedCircle
+                />
+              <Card>
+                  <Card.Body>
+                  <Card.Title>Special title treatment</Card.Title>
+                  <Card.Text>
+                    With supporting text below as a natural lead-in to additional content.
+                  </Card.Text>
+                  <Button variant="primary">Go somewhere</Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
 
-          </Navbar.Collapse>
-        </Navbar>
-      
+      </body>
+        <footer className={classes.footer}>
+          <Card>
+            <Card.Body>
+              <span >Casa vacanza "Le Agavi del Golfo"</span>
+              <span >Via Ugo Botti 56, 19126 La Spezia</span>
+              <span> Tel: +39 348 0350932</span>      
+            </Card.Body>
+          </Card>
+        </footer>
     </div>
   );
 }
