@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '';
+import classes from "./component.module.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const mock=(props)=>(
