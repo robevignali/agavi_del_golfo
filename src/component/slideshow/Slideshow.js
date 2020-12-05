@@ -1,19 +1,24 @@
-import React from 'react';
+// props:
+//      intervall:string
+//      fade:boolean
+//      data:array of object {image:"", caption:""}
 
+
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
 
 const slideshow=(props)=>(
-    <Carousel 
+    <Carousel
         fade={props.fade}
         interval={props.interval} 
         slide={props.slide}
+
             >
-            {props.images.map(item=>(
+            {props.data.map(item=>(
                 <Carousel.Item>
                     <img
                         style={{
-                            height:props.dim,
                             width:"100%"
                         }} 
                         

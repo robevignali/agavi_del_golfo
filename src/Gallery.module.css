@@ -1,0 +1,27 @@
+.gallery__title{
+    width: 20%;
+    margin: auto;
+    box-shadow: 6px 12px 9px 0px #00000040;
+    align-items: center;
+    padding: 10px;
+    background-color: #88b18a;
+    border-radius: 50%;
+    margin-top: 190px;
+    margin-bottom: 80px;
+}
+
+.gallery__title__text{
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-family: 'Dancing Script'   
+}
+
+.gallery__picture{
+    padding: 20px;
+    margin-bottom: 30px;
+    border-color: #00000075;
+    box-shadow: 4px 4px 8px 0px #0000004a;
+    height: 200px;
+    width: fit-content;
+}

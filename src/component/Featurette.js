@@ -17,7 +17,7 @@ const featurette=(props)=>(
                         interval={"100000"}
                         dim={"400px"}
                         fade={true}
-                        images={props.images}
+                        data={props.images}
                     />
                 </Card>
             </Col>        
@@ -27,16 +27,16 @@ const featurette=(props)=>(
         <Col md="7">
             <Card border="light" className={classes.feature__text}>
 
-                <Card.Img  className={classes.feature__overlay} variant="top" src="https://i.postimg.cc/tTMnYczw/8rgt-n9jh-130928.jpg" /> 
+                <Card.Img  className={classes.feature__overlay} src="https://i.postimg.cc/tTMnYczw/8rgt-n9jh-130928.jpg" /> 
                 <Card.ImgOverlay>
                     <Card.Title style={{margin:"0", paddingTop:props.spacing}}>
                         <h1>{props.title}</h1>
                     </Card.Title>
-                    <Card.Subtitle>
-                        <h2>It’ll blow your mind.</h2>
-                    </Card.Subtitle>
+                    {/* <Card.Subtitle>
+                        <h2>{props.subtitle}</h2>
+                    </Card.Subtitle> */}
                     <Card.Body style={{padding:"0"}}>
-                        <h5>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</h5>
+                        <h5>{props.text}</h5>
                     </Card.Body>
                 </Card.ImgOverlay>
 
@@ -50,7 +50,7 @@ const featurette=(props)=>(
                         interval={"100000"}
                         dim={"400px"}
                         fade={true}
-                        images={props.images}
+                        data={props.images}
                     />
                 </Card>
             </Col>        
