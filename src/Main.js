@@ -5,7 +5,7 @@ import Slideshow from './component/slideshow/Slideshow';
 import Footer from './component/Footer';
 import HighlightStrip from './component/HighlightStrip/HighlightStrip';
 import Featurette from './component/Featurette';
-// import Modal from './component/Modal';
+
 
 function App() {
   // const [modalOpen,setModal]=React.useState(false);

@@ -3,7 +3,7 @@
 //      isOpen: boolean
 //      handleClose: function
 //      data: array of object {image:"", caption:""}
-
+//      index: index to point
 
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,7 +25,7 @@ const myModal=(props)=>{
                     interval="100000"
                     fade="true"
                     data={props.data}
-                    
+                    index={props.index}
                     />
             </Modal.Body>
             

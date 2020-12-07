@@ -34,16 +34,17 @@ const Gallery=(props)=> {
     ]
     const [index,setIndex]=React.useState(0);
     const [modalOpen,setModal]=React.useState(false);
-    const openModal=()=>{
-        
+    const openModal=(imageIndex)=>{
         setModal(true);
+        setIndex(imageIndex);
     }
     const closeModal =()=>setModal(false);
-
-    const picts=data.map(obj=>
+    const images=[...data];
+    const picts=images.map((obj,index)=>
         <Col xs={6} md={3}>
-            <Image 
-                onClick={openModal} 
+            <Image
+                index={index} 
+                onClick={()=>openModal(index)} 
                 src={obj.image} 
                 thumbnail 
                 className={classes.gallery__picture} 
@@ -57,7 +58,7 @@ const Gallery=(props)=> {
             isOpen={modalOpen} 
             handleClose={closeModal}
             data={data}
-            
+            index={index}
             />
         
         <div className={classes.gallery__title}>

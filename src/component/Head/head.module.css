@@ -31,11 +31,12 @@
   .brand__subtext {
     padding-left: 60px;
     font-family: 'Playfair Display', serif;
+    
   }
   
   .brand__subtext__null {
     padding-left: 0px;
-    font-family: 'Playfair Display', serif;
+    
     font-size: 0%;
   }
     

@@ -13,7 +13,7 @@ const slideshow=(props)=>(
         fade={props.fade}
         interval={props.interval} 
         slide={props.slide}
-
+        defaultActiveIndex={props.index}
             >
             {props.data.map(item=>(
                 <Carousel.Item>

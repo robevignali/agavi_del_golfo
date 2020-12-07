@@ -75,9 +75,8 @@ const Head=(props)=>{
           <NavDropdown  style={{fontSize:navbar.link_dim}} title="Gallery" id="basic-nav-dropdown">
             <NavDropdown.Item href="/gallery">The Apartment</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">The Sourroundings</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Instagram</NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.3">Instagram</NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
