@@ -76,7 +76,7 @@ const Head=(props)=>{
             <NavDropdown.Item href="/gallery">The Apartment</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">The Sourroundings</NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.3">Instagram</NavDropdown.Item>
+            <NavDropdown.Item href="/instagram">Instagram</NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
