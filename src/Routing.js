@@ -2,8 +2,8 @@ import React from 'react';
 import {BrowserRouter,Switch,Route,NavLink,Redirect} from 'react-router-dom';
 import Head from './component/Head/Head';
 import Main from './Main';
-import Gallery from './Gallery';
-import Instagram from './container/Instagram_gallery'
+import Gallery from './container/apartment gallery/Apartment_gallery';
+import Instagram from './container/instagram gallery/Instagram_gallery'
 
 
 const routing=()=>(
@@ -11,7 +11,7 @@ const routing=()=>(
     <Head/>
     <BrowserRouter>
         <Switch>
-            <Route path='/instagram' component={Instagram}/>    
+            <Route path='/instagram' component={Instagram}/>   
             <Route path='/gallery' component={Gallery}/>
             <Route path='/' component={Main}/>
             <Route render={()=>(
