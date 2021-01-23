@@ -2,17 +2,18 @@ import React from 'react';
 import {BrowserRouter,Switch,Route,NavLink,Redirect} from 'react-router-dom';
 import Head from './component/Head/Head';
 import Main from './Main';
-import Gallery from './container/apartment gallery/Apartment_gallery';
-import Instagram from './container/instagram gallery/Instagram_gallery'
-
+import Apartment_gallery from './container/apartment gallery/Apartment_gallery';
+import Instagram_gallery from './container/instagram gallery/Instagram_gallery'
+import Surrounding_gallery from './container/instagram gallery/Instagram_gallery'
 
 const routing=()=>(
 <div>
     <Head/>
     <BrowserRouter>
         <Switch>
-            <Route path='/instagram' component={Instagram}/>   
-            <Route path='/gallery' component={Gallery}/>
+            <Route path='/instagram' component={Instagram_gallery}/>   
+            <Route path='/apartment' component={Apartment_gallery}/>
+            <Route path='/surrounding' component={Surrounding_gallery}/>
             <Route path='/' component={Main}/>
             <Route render={()=>(
                 <div style={{
