@@ -6,9 +6,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Card from 'react-bootstrap/Card';
+import felicita from '../../assets/images/Feli.jpg';
+import ombretta from '../../assets/images/ombretta.jpg';
+import lulu from '../../assets/images/lulu.jpg';
 
 
-const highlightStrip=(props)=>(
+const highlightStrip=()=>(
     
     <Container fluid className={classes.highlightStrip}>
         <div className={classes.highlightStrip__title}>
@@ -20,7 +23,7 @@ const highlightStrip=(props)=>(
             <Col lg={4}>
                 <Image 
                     className={classes.highlightStrip__image} 
-                    src={props.firstImage}
+                    src={felicita}
                     roundedCircle
                 />
                 <Card  border="light" >
@@ -36,7 +39,7 @@ const highlightStrip=(props)=>(
             <Col lg={4}>
                 <Image 
                     className={classes.highlightStrip__image}
-                    src={props.secondImage}
+                    src={ombretta}
                     roundedCircle
                 />
                 <Card border="light">
@@ -52,7 +55,7 @@ const highlightStrip=(props)=>(
             <Col lg={4}>
                 <Image 
                     className={classes.highlightStrip__image}
-                    src={props.thirdImage}
+                    src={lulu}
                     roundedCircle
                 />
                 <Card border="light">

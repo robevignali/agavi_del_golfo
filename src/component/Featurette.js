@@ -32,9 +32,6 @@ const featurette=(props)=>(
                     <Card.Title style={{margin:"0", paddingTop:props.spacing}}>
                         <h1>{props.title}</h1>
                     </Card.Title>
-                    {/* <Card.Subtitle>
-                        <h2>{props.subtitle}</h2>
-                    </Card.Subtitle> */}
                     <Card.Body style={{padding:"0"}}>
                         <h5>{props.text}</h5>
                     </Card.Body>
@@ -48,7 +45,7 @@ const featurette=(props)=>(
                 <Card border="light" className={classes.feature__image}>
                     <Slideshow
                         interval={"100000"}
-                        dim={"400px"}
+                        dim={"500px"}
                         fade={true}
                         data={props.images}
                     />

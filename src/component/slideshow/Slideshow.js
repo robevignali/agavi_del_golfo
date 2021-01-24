@@ -15,8 +15,8 @@ const slideshow=(props)=>(
         slide={props.slide}
         defaultActiveIndex={props.index}
             >
-            {props.data.map(item=>(
-                <Carousel.Item>
+            {props.data.map((item,index)=>(
+                <Carousel.Item key={index}>
                     <img
                         style={{
                             width:"100%"
