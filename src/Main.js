@@ -25,7 +25,15 @@ class App extends Component {
       })
     })
 
-    storageRef.child('indoor/').listAll().then((res)=>{
+    storageRef.child('square_outdor/').listAll().then((res)=>{
+      res.items.forEach((item)=>{
+          item.getDownloadURL().then((url)=>{
+          this.setState({secondFeaturetteData : [...this.state.secondFeaturetteData,{image:url}]})
+        })
+      })
+    })
+
+    storageRef.child('square_indoor/').listAll().then((res)=>{
       res.items.forEach((item)=>{
           item.getDownloadURL().then((url)=>{
           this.setState({firstFeaturetteData : [...this.state.firstFeaturetteData,{image:url}]})
@@ -70,11 +78,7 @@ class App extends Component {
                 overlooking the Gulf of La Spezia and offering  breathtaking sea view.
                 The terrace is equipped with table, chairs and 2 sun loungers.
                   Pets are welcome. Private free parking is also available on site."
-            images={[
-              {image:"https://i.postimg.cc/fRXSk47y/External-SQUARE-1.jpg"},
-              {image:"https://i.postimg.cc/q7Th3mQL/External-SQUARE-2.jpg"},
-              {image:"https://i.postimg.cc/DyRb2fXR/External-SQUARE-3.jpg"}
-            ]}
+            images={this.state.secondFeaturetteData}
             />
           <div className={classes.divider}/>
           <Featurette
