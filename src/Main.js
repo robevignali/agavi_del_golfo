@@ -11,7 +11,8 @@ class App extends Component {
   state = { 
     slideshowData: [],
     firstFeaturetteData: [],
-    secondFeaturetteData: []
+    secondFeaturetteData: [],
+    thirdFeaturetteData: []
   }
   
   componentDidMount() {
@@ -40,6 +41,15 @@ class App extends Component {
         })
       })
     })
+
+    storageRef.child('square_surrounding/').listAll().then((res)=>{
+      res.items.forEach((item)=>{
+          item.getDownloadURL().then((url)=>{
+          this.setState({thirdFeaturetteData : [...this.state.thirdFeaturetteData,{image:url}]})
+        })
+      })
+    })
+
   }
 
   render() {
@@ -87,11 +97,7 @@ class App extends Component {
             spacing="100px" 
             title="The Surroundings"
             text="Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo."
-            images={[
-              {image:"https://i.postimg.cc/pr58msYh/kitchen.jpg"},
-              {image:"https://i.postimg.cc/pr58msYh/kitchen.jpg"},
-              {image:"https://i.postimg.cc/pr58msYh/kitchen.jpg"}
-            ]}
+            images={this.state.thirdFeaturetteData}
             />
           
           <Footer/>
