@@ -30,7 +30,7 @@ const Head=(props)=>{
     position: "top",
     text_dim: classes.brand__text,
     subtext_dim: classes.brand__subtext,
-    link_dim: 'x-large'
+    link_dim: classes.brand__link
   }
     
 
@@ -70,9 +70,16 @@ const Head=(props)=>{
         <Nav 
           className="mr-auto"
           >
-          <Nav.Link style={{fontSize:navbar.link_dim}} href="#first">First</Nav.Link>
-          <Nav.Link style={{fontSize:navbar.link_dim}} href="#second">Second</Nav.Link>
-          <NavDropdown  style={{fontSize:navbar.link_dim}} title="Gallery" id="basic-nav-dropdown">
+          <Nav.Link className={navbar.link_dim} href="#first">Team</Nav.Link>
+          <Nav.Link className={navbar.link_dim} href="#second">Apartment</Nav.Link>
+          <Nav.Link className={navbar.link_dim} href="#third">Location</Nav.Link>
+          {/* <Nav.Link className={navbar.link_dim} href="#fourth">Surrounding</Nav.Link> */}
+          <NavDropdown  className={navbar.link_dim} title="Surrounding" id="basic-nav-dropdown">
+            <NavDropdown.Item href="">Surrounding</NavDropdown.Item>
+            <NavDropdown.Item href="">Day Trip</NavDropdown.Item>
+          </NavDropdown>
+          <Nav.Link className={navbar.link_dim} href="#fourth">Get in touch</Nav.Link>
+          <NavDropdown  className={navbar.link_dim} title="Gallery" id="basic-nav-dropdown">
             <NavDropdown.Item href="/apartment">The Apartment</NavDropdown.Item>
             <NavDropdown.Item href="/surrounding">The Sourroundings</NavDropdown.Item>
             <NavDropdown.Divider />

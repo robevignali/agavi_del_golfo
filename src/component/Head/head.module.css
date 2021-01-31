@@ -31,15 +31,18 @@
   .brand__subtext {
     padding-left: 60px;
     font-family: 'Playfair Display', serif;
-    
   }
   
   .brand__subtext__null {
     padding-left: 0px;
-    
     font-size: 0%;
   }
-    
+
+  .brand__link {
+    font-family: 'Playfair Display', serif;
+    font-size:120%;
+  }
+
   .navbar{
     transition: all 0.2s linear;
   }
