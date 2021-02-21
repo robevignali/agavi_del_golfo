@@ -1,11 +1,12 @@
 import React from 'react';
-import classes from "./component.module.css"
+import classes from "../component.module.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Card from "react-bootstrap/Card"
-import Slideshow from './slideshow/Slideshow';
+import Slideshow from '../slideshow/Slideshow';
+import Map from '../Map/Map';
 
 const featurette=(props)=>(
 <Container className={classes.feature__container}>
@@ -34,8 +35,10 @@ const featurette=(props)=>(
                     </Card.Title>
                     <Card.Body style={{padding:"0"}}>
                         <h5>{props.text}</h5>
-                    </Card.Body>
+                        
+                     </Card.Body>
                 </Card.ImgOverlay>
+                
 
             </Card>
         </Col>
@@ -54,6 +57,13 @@ const featurette=(props)=>(
             :null
         }
     </Row>
+    {props.map?
+        <Map
+            height={'300px'}
+            width={'100%'}
+        />
+    
+    :null}
 </Container>
 )
 export default featurette;

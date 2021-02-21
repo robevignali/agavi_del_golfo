@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Slideshow from './component/slideshow/Slideshow';
 import Footer from './component/Footer';
 import HighlightStrip from './component/HighlightStrip/HighlightStrip';
-import Featurette from './component/Featurette';
+import Featurette from './component/featurette/Featurette';
 
 class App extends Component {
   state = { 
@@ -89,6 +89,7 @@ class App extends Component {
                 The terrace is equipped with table, chairs and 2 sun loungers.
                   Pets are welcome. Private free parking is also available on site."
             images={this.state.secondFeaturetteData}
+            map={true}
             />
           <div className={classes.divider}/>
           <Featurette
@@ -96,7 +97,10 @@ class App extends Component {
             rightImg={true}
             spacing="100px" 
             title="The Surroundings"
-            text="Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo."
+            text="Our apartment is in the province of La Spezia. 
+            Due to its location, La Spezia is a strategic place if you want to explore Liguria and Tuscany.
+             Pisa, Florence and Genoa can be easily reached traveling by car or train. Furthermore, La Spezia is the ideal starting point to visit UNESCO heritage sites, such as Portovenere and Cinque Terre.
+              The famous marble caves of Carrara are also at a short distance from La Spezia; about half an hour by car towards the Apuan Alps to experience their history and incredible views."
             images={this.state.thirdFeaturetteData}
             />
           
