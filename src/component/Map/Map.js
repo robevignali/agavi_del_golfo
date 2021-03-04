@@ -1,55 +1,83 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import mapStyles from './mapStyles.json'
+import mapStyles from './mapStyles.json';
+import classes from "./map.module.css";
 
-const marker={
-    color: 'white', 
-    background: '#88b18a',
-    padding: '10px 18px',
-    display: 'inline-flex',
-    textAlign: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: '100%',
-    transform: 'translate(-50%, -50%)'
-}
+const getInfoWindowString = (place) => `
+    <div>
+      <div class=${classes.infoWindow_title}>
+        ${place.name}
+      </div>
+      <div class=${classes.infoWindow_text}>
+        ${place.formatted_address}
+      </div>
+      <div class=${classes.infoWindow_text}>
+        phone: ${place.international_phone_number}
+      </div>
+      <div style="font-size: 14px; color: grey;">
+      <a href="${place.url}">Show on Google Maps</a>
+      </div>
+    </div>`;
 
-const createMapOptions=(maps)=>(
+const createMapOptions=()=>(
     {   
-        //zoomControl: false,
-        // panControl: false,
-        // mapTypeControl: false,
         scrollwheel: false,
         styles : mapStyles
-        //styles: [{ stylers: [{ 'saturation': 0 }, { 'gamma': 0.8 }, { 'lightness': 4 }, { 'visibility': 'on' }] }]
+        
     }
 )
 
-const Map = (props) => (
+const handleApiLoaded = (map, maps, places) => {
+    const markers = [];
+    const infowindows = [];
+  
+    places.forEach((place) => {
+      markers.push(new maps.Marker({
+        position: {
+          lat: place.geometry.location.lat,
+          lng: place.geometry.location.lng,
+        },
+        map,
+      }));
+  
+      infowindows.push(new maps.InfoWindow({
+        content: getInfoWindowString(place),
+      }));
+    });
+  
+    markers.forEach((marker, i) => {
+      marker.addListener('mouseover', () => {
+        infowindows[i].open(map, marker);
+      });
+      marker.addListener('mouseout', () => {
+        infowindows[i].close(map, marker);
+      });      
+    });
+};
 
-    <div style={
-        { 
-            height: props.height,
-            width: props.width,
-            padding: '10px',
-            paddingTop: '40px'
-        }
-    }>
-        <GoogleMapReact
-            bootstrapURLKeys={{ key: 'AIzaSyB8QGkVKMgJ3B7EnSPSWPSCLe2SL_kwUsg' }}
-            center={{lat: 44.096192290072295, lng:  9.8690468875081}}
-            zoom={16}
-            options={createMapOptions}
-        >
-            <div
-                lat={44.096192290072295}
-                lng={9.8690468875081}
-                style={marker}
-            > We are here!</div>
 
-        </GoogleMapReact>
-    </div>  
+const Map=(props)=>{
 
-)
+    return (
+        <div style={
+            { 
+                height: props.height,
+                width: props.width,
+                padding: '10px',
+                paddingTop: '40px'
+            }
+        }>
+            <GoogleMapReact
+                yesIWantToUseGoogleMapApiInternals
+                onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps, props.places.results)}
+                bootstrapURLKeys={{ key: 'AIzaSyB8QGkVKMgJ3B7EnSPSWPSCLe2SL_kwUsg' }}
+                defaultCenter={props.center}
+                zoom={props.zoom}
+                options={createMapOptions}
+            >
+            </GoogleMapReact>
+        </div>     
+    )
+}
 
 export default Map;

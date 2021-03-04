@@ -2,10 +2,13 @@ import React, {Component} from 'react';
 import firebase from 'firebase/app';
 import classes from './Main.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Slideshow from './component/slideshow/Slideshow';
-import Footer from './component/Footer';
-import HighlightStrip from './component/HighlightStrip/HighlightStrip';
-import Featurette from './component/featurette/Featurette';
+import Slideshow from '../../component/slideshow/Slideshow';
+import Footer from '../../component/Footer';
+import HighlightStrip from '../../component/HighlightStrip/HighlightStrip';
+import Featurette from '../../component/featurette/Featurette';
+import agavi_place from '../../assets/const/agavi_del_golfo.json';
+import agavi_coord from '../../assets/const/agavi_del_golfo_coord';
+import places from '../../assets/const/places.json';
 
 class App extends Component {
   state = { 
@@ -90,6 +93,9 @@ class App extends Component {
                   Pets are welcome. Private free parking is also available on site."
             images={this.state.secondFeaturetteData}
             map={true}
+            places={agavi_place}
+            map_center={agavi_coord}
+            map_zoom={13}
             />
           <div className={classes.divider}/>
           <Featurette
@@ -102,7 +108,11 @@ class App extends Component {
              Pisa, Florence and Genoa can be easily reached traveling by car or train. Furthermore, La Spezia is the ideal starting point to visit UNESCO heritage sites, such as Portovenere and Cinque Terre.
               The famous marble caves of Carrara are also at a short distance from La Spezia; about half an hour by car towards the Apuan Alps to experience their history and incredible views."
             images={this.state.thirdFeaturetteData}
-            />
+            map={true}
+            places={places}
+            map_center={agavi_coord}
+            map_zoom={10}            
+          />
           
           <Footer/>
       </div>

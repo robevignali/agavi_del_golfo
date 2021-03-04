@@ -1,0 +1,127 @@
+{
+    "html_attributions": [],
+    "results": [
+        {
+        "address_components": [
+            {
+                "long_name": "56",
+                "short_name": "56",
+                "types": [
+                    "street_number"
+                ]
+            },
+            {
+                "long_name": "Via Ugo Botti",
+                "short_name": "Via Ugo Botti",
+                "types": [
+                    "route"
+                ]
+            },
+            {
+                "long_name": "La Spezia",
+                "short_name": "La Spezia",
+                "types": [
+                    "locality",
+                    "political"
+                ]
+            },
+            {
+                "long_name": "La Spezia",
+                "short_name": "La Spezia",
+                "types": [
+                    "administrative_area_level_3",
+                    "political"
+                ]
+            },
+            {
+                "long_name": "Provincia della Spezia",
+                "short_name": "SP",
+                "types": [
+                    "administrative_area_level_2",
+                    "political"
+                ]
+            },
+            {
+                "long_name": "Liguria",
+                "short_name": "Liguria",
+                "types": [
+                    "administrative_area_level_1",
+                    "political"
+                ]
+            },
+            {
+                "long_name": "Italy",
+                "short_name": "IT",
+                "types": [
+                    "country",
+                    "political"
+                ]
+            },
+            {
+                "long_name": "19126",
+                "short_name": "19126",
+                "types": [
+                    "postal_code"
+                ]
+            }
+        ],
+        "adr_address": "<span class=\"street-address\">Via Ugo Botti, 56</span>, <span class=\"postal-code\">19126</span> <span class=\"locality\">La Spezia</span> <span class=\"region\">SP</span>, <span class=\"country-name\">Italy</span>",
+        "business_status": "OPERATIONAL",
+        "formatted_address": "Via Ugo Botti, 56, 19126 La Spezia SP, Italy",
+        "formatted_phone_number": "348 035 0932",
+        "geometry": {
+            "location": {
+                "lat": 44.0961252,
+                "lng": 9.8690847
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": 44.09747878029149,
+                    "lng": 9.870458880291503
+                },
+                "southwest": {
+                    "lat": 44.0947808197085,
+                    "lng": 9.867760919708498
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
+        "international_phone_number": "+39 348 035 0932",
+        "name": "Le Agavi del Golfo",
+        "opening_hours": {
+            "open_now": true,
+            "periods": [
+                {
+                    "open": {
+                        "day": 0,
+                        "time": "0000"
+                    }
+                }
+            ],
+            "weekday_text": [
+                "Monday: Open 24 hours",
+                "Tuesday: Open 24 hours",
+                "Wednesday: Open 24 hours",
+                "Thursday: Open 24 hours",
+                "Friday: Open 24 hours",
+                "Saturday: Open 24 hours",
+                "Sunday: Open 24 hours"
+            ]
+        },
+        "place_id": "ChIJW-o6Q9H91BIRU6kkQ0gbQBE",
+        "plus_code": {
+            "compound_code": "3VW9+FJ La Spezia, SP, Italy",
+            "global_code": "8FPF3VW9+FJ"
+        },
+        "types": [
+            "lodging",
+            "point_of_interest",
+            "establishment"
+        ],
+        "url": "https://maps.google.com/?cid=1243023494332328275",
+        "utc_offset": 60,
+        "vicinity": "Via Ugo Botti, 56, La Spezia"
+    }
+    ],
+    "status": "OK"
+}

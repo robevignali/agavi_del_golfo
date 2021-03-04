@@ -8,6 +8,7 @@ import Card from "react-bootstrap/Card"
 import Slideshow from '../slideshow/Slideshow';
 import Map from '../Map/Map';
 
+
 const featurette=(props)=>(
 <Container className={classes.feature__container}>
     <Row>
@@ -61,6 +62,9 @@ const featurette=(props)=>(
         <Map
             height={'300px'}
             width={'100%'}
+            places={props.places}
+            center={props.map_center}
+            zoom={props.map_zoom}
         />
     
     :null}
