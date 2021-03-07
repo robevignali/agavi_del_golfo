@@ -1,0 +1,16 @@
+.head {
+    text-align: center;
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: 3.5rem;
+}
+
+.text {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.card {
+    text-align: center;
+}

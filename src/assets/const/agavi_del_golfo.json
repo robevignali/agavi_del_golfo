@@ -120,7 +120,8 @@
         ],
         "url": "https://maps.google.com/?cid=1243023494332328275",
         "utc_offset": 60,
-        "vicinity": "Via Ugo Botti, 56, La Spezia"
+        "vicinity": "Via Ugo Botti, 56, La Spezia",
+        "photo" : "https://firebasestorage.googleapis.com/v0/b/agavi-del-golfo-image-storage.appspot.com/o/SlideShow_pict%2Fslide_2_169.JPG?alt=media&token=8a385f88-342d-4a68-afb5-d96ec02ef048"
     }
     ],
     "status": "OK"

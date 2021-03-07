@@ -19,10 +19,10 @@ firebase.initializeApp(firebaseConfig);
 
 
 ReactDOM.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Routing />
-  </React.StrictMode>,
-  document.getElementById('root')
+  // </React.StrictMode>
+  ,document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

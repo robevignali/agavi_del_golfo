@@ -16,7 +16,7 @@ const featurette=(props)=>(
             <Col md="5">
                 <Card border="light" className={classes.feature__image}>
                     <Slideshow
-                        interval={"100000"}
+                        interval={100000}
                         dim={"400px"}
                         fade={true}
                         data={props.images}
@@ -48,7 +48,7 @@ const featurette=(props)=>(
             <Col md="5">
                 <Card border="light" className={classes.feature__image}>
                     <Slideshow
-                        interval={"100000"}
+                        interval={100000}
                         dim={"500px"}
                         fade={true}
                         data={props.images}
@@ -60,7 +60,7 @@ const featurette=(props)=>(
     </Row>
     {props.map?
         <Map
-            height={'300px'}
+            height={'400px'}
             width={'100%'}
             places={props.places}
             center={props.map_center}

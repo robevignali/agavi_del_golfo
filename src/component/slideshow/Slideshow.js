@@ -1,5 +1,5 @@
 // props:
-//      intervall:string
+//      interval:number
 //      fade:boolean
 //      data:array of object {image:"", caption:""}
 

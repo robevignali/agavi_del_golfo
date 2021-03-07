@@ -34,12 +34,16 @@ const Gallery=(props)=> {
     ]
     const [index,setIndex]=React.useState(0);
     const [modalOpen,setModal]=React.useState(false);
+
     const openModal=(imageIndex)=>{
         setModal(true);
         setIndex(imageIndex);
     }
+
     const closeModal =()=>setModal(false);
+
     const images=[...data];
+    
     const picts=images.map((obj,index)=>
         <Col xs={6} md={3}>
             <Image

@@ -2,22 +2,30 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import mapStyles from './mapStyles.json';
 import classes from "./map.module.css";
+// import InfoWindow from "../InfoWindow/InfoWindow";
+// import agavi_pict from "../../assets/images/agavi_ext_square.jpg";
 
 const getInfoWindowString = (place) => `
-    <div>
-      <div class=${classes.infoWindow_title}>
-        ${place.name}
+    <div class=${classes.infoWindow}>
+      <div>
+        <img class=${classes.infoWindow_image} src=${place.photo}/>
       </div>
-      <div class=${classes.infoWindow_text}>
-        ${place.formatted_address}
+      <div>
+        <div class=${classes.infoWindow_title}>
+          ${place.name}
+        </div>
+        <div class=${classes.infoWindow_text}>
+          ${place.formatted_address}
+        </div>
+        <div style="font-size: 14px; color: grey;">
+        <a href="${place.url}">Show on Google Maps</a>
+        </div>
       </div>
-      <div class=${classes.infoWindow_text}>
-        phone: ${place.international_phone_number}
-      </div>
-      <div style="font-size: 14px; color: grey;">
-      <a href="${place.url}">Show on Google Maps</a>
-      </div>
-    </div>`;
+      
+    <div> 
+    `;
+
+// const getInfoWindowString = (place) => <InfoWindow/>;
 
 const createMapOptions=()=>(
     {   
@@ -46,12 +54,9 @@ const handleApiLoaded = (map, maps, places) => {
     });
   
     markers.forEach((marker, i) => {
-      marker.addListener('mouseover', () => {
+      marker.addListener('click', () => {
         infowindows[i].open(map, marker);
       });
-      marker.addListener('mouseout', () => {
-        infowindows[i].close(map, marker);
-      });      
     });
 };
 

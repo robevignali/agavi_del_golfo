@@ -9,6 +9,8 @@ import Featurette from '../../component/featurette/Featurette';
 import agavi_place from '../../assets/const/agavi_del_golfo.json';
 import agavi_coord from '../../assets/const/agavi_del_golfo_coord';
 import places from '../../assets/const/places.json';
+import agavi_pict from "../../assets/images/agavi_ext_square.jpg";
+import Pricing from "../../component/Pricing/Pricing";
 
 class App extends Component {
   state = { 
@@ -61,7 +63,7 @@ class App extends Component {
       <div className={classes.app}>
         <div style={{height:'105px', backgroundColor: '#88b18a'}}></div>
           <Slideshow
-            interval={"5000"}
+            interval={5000}
             dim={"500px"}
             fade={false}
             data={this.state.slideshowData}
@@ -96,6 +98,7 @@ class App extends Component {
             places={agavi_place}
             map_center={agavi_coord}
             map_zoom={13}
+            infoWindow_pict={agavi_pict}
             />
           <div className={classes.divider}/>
           <Featurette
@@ -113,7 +116,8 @@ class App extends Component {
             map_center={agavi_coord}
             map_zoom={10}            
           />
-          
+          <div className={classes.divider}/>
+          <Pricing/>
           <Footer/>
       </div>
     );

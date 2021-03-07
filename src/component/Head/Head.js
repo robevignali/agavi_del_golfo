@@ -78,7 +78,8 @@ const Head=(props)=>{
             <NavDropdown.Item href="">Surrounding</NavDropdown.Item>
             <NavDropdown.Item href="">Day Trip</NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link className={navbar.link_dim} href="#fourth">Get in touch</Nav.Link>
+          <Nav.Link className={navbar.link_dim} href="#fourth">Pricing</Nav.Link>
+          <Nav.Link className={navbar.link_dim} href="#fifth">Get in touch</Nav.Link>
           <NavDropdown  className={navbar.link_dim} title="Gallery" id="basic-nav-dropdown">
             <NavDropdown.Item href="/apartment">The Apartment</NavDropdown.Item>
             <NavDropdown.Item href="/surrounding">The Sourroundings</NavDropdown.Item>
