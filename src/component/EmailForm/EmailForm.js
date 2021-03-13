@@ -1,33 +1,29 @@
-
 // props:   
 //      isOpen: boolean
 //      handleClose: function
 //      data: object
-
-import React, {Component} from 'react';
-// import {useFormik} from 'formik';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
-import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com';
+import Spinner from 'react-bootstrap/Spinner';
 
 
+ 
+const Emailform = props =>{
 
-class Emailform extends Component {
-    state = {
-        user_name: '',  
-        user_mail: '',
-      //   address: '',
-      //   city: '',
-      //   state: '',
-        message: ''
-      }
-    
-    handleSubmit(e) {
+    const [user_name, setUser_name] = useState ('');
+    const [user_mail, setUser_mail] = useState ('');
+    const [message, setMessage] = useState ('');
+    const [isLoading, setIsLoading] = useState (false);
+
+    const handleSubmit=(e)=> {
+        setIsLoading(true);
         e.preventDefault()
-        const { user_name, user_mail, message } = this.state
+        
         let templateParams = {
           user_mail: user_mail,
           user_name: user_name,
@@ -39,33 +35,29 @@ class Emailform extends Component {
             'contact_form',
             templateParams,
             'user_1c42fyO9mldeRDtsAIOqU'
-         )
+         ).then((res)=>{
+             setIsLoading(false);
+             console.log('SUCCESS!', res.status, res.text);
+            },
+            (error)=>{
+                setIsLoading(false);
+                console.log('FAILED...', error);
+            })
 
-         this.resetForm()
+         resetForm();
     }
 
-    resetForm() {
-        this.setState({
-            user_name: '',  
-            user_mail: '',
-          //   address: '',
-          //   city: '',
-          //   state: '',
-            message: ''
-        })
+    const resetForm=()=> {
+        setUser_name('');
+        setUser_mail('');
+        setMessage('');
     }
 
-    handleChange = (param, e) => {
-        this.setState({ [param]: e.target.value })
-    }
-
-    render() {
-
-        return (  
+    return (
 
         <Modal 
-        show={this.props.isOpen} 
-        onHide={this.props.handleClose} 
+        show={props.isOpen} 
+        onHide={props.handleClose} 
         size="lg"
         >
             <Modal.Header closeButton>
@@ -75,15 +67,15 @@ class Emailform extends Component {
             </Modal.Header>
             <Modal.Body>
                 
-                <Form onSubmit={this.handleSubmit.bind(this)}>
+                <Form onSubmit={handleSubmit}>
                 <Form.Row>
                     <Form.Group as={Col} controlId="user_name">
                         {/* <Form.Label size="sm">Name</Form.Label> */}
                         <Form.Control 
                             size="sm" 
                             placeholder="Enter name"
-                            onChange={this.handleChange.bind(this, 'user_name')}
-                            value={this.state.user_name}
+                            onChange={(e)=>{setUser_name(e.target.value)}}
+                            value={user_name}
                             />
                     </Form.Group>
 
@@ -92,52 +84,30 @@ class Emailform extends Component {
                         <Form.Control 
                             size="sm" 
                             placeholder="Enter email"
-                            onChange={this.handleChange.bind(this, 'user_mail')}
-                            value={this.state.user_mail}
+                            onChange={(e)=>{setUser_mail(e.target.value)}}
+                            value={user_mail}
                             />
                     </Form.Group>
                 </Form.Row>
-
-                {/* <Form.Row>
-                    <Form.Group as={Col} md="6" controlId="address">
-                        
-                        <Form.Control 
-                            size="sm" 
-                            placeholder="Adress"
-                            onChange={formik.handleChange}
-                            value={formik.values.address} 
-                            />
-                    </Form.Group>
-                    <Form.Group as={Col} md="3" controlId="city">
-                        
-                        <Form.Control 
-                            size="sm" 
-                            placeholder="City"
-                            onChange={formik.handleChange}
-                            value={formik.values.city}
-                            />
-                    </Form.Group>                
-                    <Form.Group as={Col} md="3" controlId="state">
-                        
-                        <Form.Control 
-                            size="sm" 
-                            placeholder="State"
-                            onChange={formik.handleChange}
-                            value={formik.values.state}
-                            />
-                    </Form.Group>
-                </Form.Row> */}
                 <Form.Group controlId="message">
                     <Form.Control 
                         as="textarea" 
                         rows={3} 
                         placeholder="Send us a text"
-                        onChange={this.handleChange.bind(this, 'message')}
-                        value={this.state.message}
+                        onChange={(e)=>{setMessage(e.target.value)}}
+                        value={message}
                         />
                 </Form.Group>
                 <Button variant="primary" type="submit">
-                    Submit
+                    {isLoading? 
+                        <Spinner
+                            as="span"
+                            animation="border"
+                            size="sm"
+                            role="status"
+                            aria-hidden="true"
+                        />: <p>submit</p>
+                    }
                 </Button>
                 </Form>
 
@@ -145,9 +115,11 @@ class Emailform extends Component {
             
         </Modal>
 
-        );
-    }
-}
- 
-export default Emailform;
+    )
 
+
+
+
+}
+
+export default Emailform;
