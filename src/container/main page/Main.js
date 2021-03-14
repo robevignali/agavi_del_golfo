@@ -11,6 +11,7 @@ import agavi_coord from '../../assets/const/agavi_del_golfo_coord';
 import places from '../../assets/const/places.json';
 import agavi_pict from "../../assets/images/agavi_ext_square.jpg";
 import Pricing from "../../component/Pricing/Pricing";
+import StayInTouch from "../../component/StayInTouch/StayInTouch"
 
 class App extends Component {
   state = { 
@@ -118,6 +119,8 @@ class App extends Component {
           />
           <div className={classes.divider}/>
           <Pricing/>
+          <div className={classes.divider}/>
+          <StayInTouch />
           <Footer/>
       </div>
     );
