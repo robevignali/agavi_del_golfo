@@ -11,8 +11,8 @@ import ombretta from '../../assets/images/ombretta.jpg';
 import lulu from '../../assets/images/lulu.jpg';
 
 
-const highlightStrip=()=>(
-    
+const highlightStrip=(props)=>(
+    <div id={props.id}>
     <Container fluid className={classes.highlightStrip}>
         <div className={classes.highlightStrip__title}>
             <h1 className={classes.highlightStrip__title__text}>
@@ -70,6 +70,6 @@ const highlightStrip=()=>(
             </Col>
         </Row>
     </Container>
-
+    </div>
 )
 export default highlightStrip;

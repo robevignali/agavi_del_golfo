@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Image from 'react-bootstrap/Image';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 
 const Head=(props)=>{
@@ -19,6 +20,10 @@ const Head=(props)=>{
       setScrolled(false);
     }
   }
+
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
 
   useEffect(() => {
     window.addEventListener('scroll',handleScroll)
@@ -48,7 +53,7 @@ const Head=(props)=>{
   return (
     
     <Navbar  variant="dark" expand="lg" fixed={navbar.position} className={classes.background}>
-      <Navbar.Brand href="/">
+      <Navbar.Brand >
         <Image
           className={classes.navbar} 
           src="https://i.postimg.cc/LXFvm9Dh/8rgt-n9jh-130928.jpg" 
@@ -70,16 +75,69 @@ const Head=(props)=>{
         <Nav 
           className="mr-auto"
           >
-          <Nav.Link className={navbar.link_dim} href="#first">Team</Nav.Link>
-          <Nav.Link className={navbar.link_dim} href="#second">Apartment</Nav.Link>
-          <Nav.Link className={navbar.link_dim} href="#third">Location</Nav.Link>
-          {/* <Nav.Link className={navbar.link_dim} href="#fourth">Surrounding</Nav.Link> */}
+          <Nav.Link className={navbar.link_dim}>
+            <Link
+                  //activeClass="active"
+                  to="team"
+                  //spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >Team</Link>
+          </Nav.Link>
+          <Nav.Link className={navbar.link_dim}>
+            <Link
+                  //activeClass="active"
+                  to="apartment"
+                  //spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+            >Apartment</Link>
+          </Nav.Link>
+          <Nav.Link className={navbar.link_dim}>
+            <Link
+                    //activeClass="active"
+                    to="location"
+                    //spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >Location</Link>
+          </Nav.Link>
           <NavDropdown  className={navbar.link_dim} title="Surrounding" id="basic-nav-dropdown">
-            <NavDropdown.Item href="">Surrounding</NavDropdown.Item>
+            <NavDropdown.Item>
+            <Link
+                  //activeClass="active"
+                  to="surrounding"
+                  //spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >Surrounding</Link>
+            </NavDropdown.Item>
             <NavDropdown.Item href="">Day Trip</NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link className={navbar.link_dim} href="#fourth">Pricing</Nav.Link>
-          <Nav.Link className={navbar.link_dim} href="#fifth">Get in touch</Nav.Link>
+          <Nav.Link className={navbar.link_dim}>
+          <Link
+                  //activeClass="active"
+                  to="pricing"
+                  //spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >Pricing</Link>
+          </Nav.Link>
+          <Nav.Link className={navbar.link_dim}>
+          <Link
+                  //activeClass="active"
+                  to="getInTouch"
+                  //spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >Get in touch</Link>
+          </Nav.Link>
           <NavDropdown  className={navbar.link_dim} title="Gallery" id="basic-nav-dropdown">
             <NavDropdown.Item href="/apartment">The Apartment</NavDropdown.Item>
             <NavDropdown.Item href="/surrounding">The Sourroundings</NavDropdown.Item>

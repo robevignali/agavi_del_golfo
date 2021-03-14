@@ -20,7 +20,7 @@ const Pricing=(props)=>{
     const data={};
 
     return (
-        
+        <div id={props.id}>
         <Container>
             <EmailForm
                 isOpen={modalOpen} 
@@ -82,6 +82,7 @@ const Pricing=(props)=>{
             </Row>
             
         </Container>
+        </div>
     )
 }
 

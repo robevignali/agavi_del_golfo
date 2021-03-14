@@ -69,9 +69,10 @@ class App extends Component {
             fade={false}
             data={this.state.slideshowData}
           />
-          <HighlightStrip/>
+          <HighlightStrip id="team"/>
           <div className={classes.divider}/>
           <Featurette
+            id="apartment"
             leftImg={false}
             rightImg={true}
             spacing="30px" 
@@ -83,6 +84,7 @@ class App extends Component {
             />
           <div className={classes.divider}/>
           <Featurette
+            id="location"
             leftImg={true}
             rightImg={false}
             spacing="30px" 
@@ -103,6 +105,7 @@ class App extends Component {
             />
           <div className={classes.divider}/>
           <Featurette
+            id="surrounding"
             leftImg={false}
             rightImg={true}
             spacing="100px" 
@@ -118,9 +121,9 @@ class App extends Component {
             map_zoom={10}            
           />
           <div className={classes.divider}/>
-          <Pricing/>
+          <Pricing id="pricing"/>
           <div className={classes.divider}/>
-          <StayInTouch />
+          <StayInTouch id="getInTouch"/>
           <Footer/>
       </div>
     );

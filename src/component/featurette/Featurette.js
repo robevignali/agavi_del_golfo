@@ -10,6 +10,7 @@ import Map from '../Map/Map';
 
 
 const featurette=(props)=>(
+<div id={props.id}>
 <Container className={classes.feature__container}>
     <Row>
         {props.leftImg?
@@ -69,5 +70,6 @@ const featurette=(props)=>(
     
     :null}
 </Container>
+</div>
 )
 export default featurette;

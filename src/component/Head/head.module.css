@@ -1,8 +1,8 @@
-.background {
+  .background {
     background-color: #88b18a;
-}
+  }
 
-.brand__title{
+  .brand__title{
     display: inline-block;
     vertical-align: middle;
   }
@@ -46,3 +46,4 @@
   .navbar{
     transition: all 0.2s linear;
   }
+

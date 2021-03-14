@@ -51,6 +51,7 @@ const StayInTouch = props => {
     }
 
     return (
+        <div id={props.id}>
         <Container>
             <Row>
                 <Col></Col>
@@ -102,6 +103,7 @@ const StayInTouch = props => {
                 <Col></Col>
             </Row>               
         </Container>
+        </div>
     )
 }
 
