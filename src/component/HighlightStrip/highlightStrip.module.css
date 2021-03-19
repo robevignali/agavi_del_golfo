@@ -1,34 +1,44 @@
-.highlightStrip{
-    margin-top: 80px;
-}
-
 
 .highlightStrip__title{
     width: 50%;
     margin: auto;
-    box-shadow: 6px 12px 9px 0px #00000040;
+  
     align-items: center;
     padding: 10px;
-    background-color: #88b18a;
-    border-radius: 50%;
+
 }
   
 .highlightStrip__title__text{
-    padding: 10px;
-    color: white;
-    font-family: 'Dancing Script', cursive;
+
+    padding-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    color: #484a46d4;
+  
+}
+
+.highlightStrip__text{
+
+    font-family: 'Playfair Display', serif;
+    text-align: justify;
+ 
+    color:#484a46ad;
   
 }
   
 .highlightStrip__name{
-    font-size: xxx-large;
-    font-family: 'Dancing Script', cursive;
-    color: #17a2b8;
+    font-size: xx-large;
+    
+    font-family: 'Playfair Display', serif;
+  
+    color: #484a46d4;
 }
   
 .highlightStrip{
       text-align: center;
-      padding: 30px;
+      padding-left: 80px;
+      padding-right: 80px;
+      margin-top: 80px;
+      
 }
     
 .highlightStrip__image{
@@ -36,3 +46,9 @@
       width: 250px;
       height: 250px;
 }
+
+.highlightStrip__overlay {
+
+    opacity: 0.2;
+    
+  }

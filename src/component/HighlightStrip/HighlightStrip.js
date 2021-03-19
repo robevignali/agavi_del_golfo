@@ -27,12 +27,18 @@ const highlightStrip=(props)=>(
                     roundedCircle
                 />
                 <Card  border="light" >
-                    <Card.Body style={{paddingTop:'0'}}>
+                <Card.Body style={{paddingTop:'0'}}>
+                <Card.Img  className={classes.highlightStrip__overlay} src="https://i.postimg.cc/tTMnYczw/8rgt-n9jh-130928.jpg" /> 
+                <Card.ImgOverlay>
                     <Card.Title className={classes.highlightStrip__name}>Felicita</Card.Title>
-                    <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
+                    <Card.Text className={classes.highlightStrip__text}>
+                    <h5>With supporting text below as a natural lead-in to additional content.
+                        With supporting text below as a natural lead-in to additional content.
+                        With supporting text below as a natural lead-in to additional content.
+                        With supporting text below as a natural lead-in to additional content.
+                    </h5>
                     </Card.Text>
-                    
+                </Card.ImgOverlay>    
                 </Card.Body>
                 </Card>
             </Col>
@@ -44,11 +50,17 @@ const highlightStrip=(props)=>(
                 />
                 <Card border="light">
                 <Card.Body style={{paddingTop:'0'}}>
-                    <Card.Title className={classes.highlightStrip__name}>Ombretta</Card.Title>
-                    <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
-                    </Card.Text>
-                    
+                    <Card.Img  className={classes.highlightStrip__overlay} src="https://i.postimg.cc/tTMnYczw/8rgt-n9jh-130928.jpg" /> 
+                    <Card.ImgOverlay>
+                        <Card.Title className={classes.highlightStrip__name}>Ombretta</Card.Title>
+                        <Card.Text className={classes.highlightStrip__text}>
+                        <h5>With supporting text below as a natural lead-in to additional content.
+                        With supporting text below as a natural lead-in to additional content.
+                        With supporting text below as a natural lead-in to additional content.
+                        With supporting text below as a natural lead-in to additional content.
+                        </h5>
+                        </Card.Text>
+                    </Card.ImgOverlay>   
                 </Card.Body>
                 </Card>
             </Col>
@@ -60,11 +72,17 @@ const highlightStrip=(props)=>(
                 />
                 <Card border="light">
                 <Card.Body style={{paddingTop:'0'}}>
-                    <Card.Title className={classes.highlightStrip__name}>Lulù</Card.Title>
-                    <Card.Text>
+                <Card.Img  className={classes.highlightStrip__overlay} src="https://i.postimg.cc/tTMnYczw/8rgt-n9jh-130928.jpg" /> 
+                <Card.ImgOverlay>
+                    <Card.Title className={classes.highlightStrip__name}>Lulu</Card.Title>
+                    <Card.Text className={classes.highlightStrip__text}>
+                    <h5>With supporting text below as a natural lead-in to additional content.
                     With supporting text below as a natural lead-in to additional content.
+                    With supporting text below as a natural lead-in to additional content.
+                    With supporting text below as a natural lead-in to additional content.
+                    </h5>
                     </Card.Text>
-                    
+                </Card.ImgOverlay>   
                 </Card.Body>
                 </Card>
             </Col>
