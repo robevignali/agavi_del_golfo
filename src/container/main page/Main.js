@@ -64,13 +64,13 @@ class App extends Component {
       <div className={classes.app}>
         <div style={{height:'105px', backgroundColor: '#88b18a'}}></div>
           <Slideshow
-            interval={5000}
+            interval={3000}
             dim={"500px"}
-            fade={false}
+            fade={true}
             data={this.state.slideshowData}
           />
           <HighlightStrip id="team"/>
-          <div className={classes.divider}/>
+          <div  className={classes.divider}/>
           <Featurette
             id="apartment"
             leftImg={false}
