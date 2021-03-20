@@ -75,6 +75,12 @@ const Head=(props)=>{
         <Nav 
           className="mr-auto"
           >
+          <NavDropdown  className={navbar.link_dim} title="Gallery" id="basic-nav-dropdown">
+            <NavDropdown.Item href="/apartment">The Apartment</NavDropdown.Item>
+            <NavDropdown.Item href="/surrounding">The Sourroundings</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="/instagram">Instagram</NavDropdown.Item>
+          </NavDropdown>
           <Nav.Link className={navbar.link_dim}>
             <Link
                   //activeClass="active"
@@ -138,12 +144,12 @@ const Head=(props)=>{
                   duration={500}
                 >Get in touch</Link>
           </Nav.Link>
-          <NavDropdown  className={navbar.link_dim} title="Gallery" id="basic-nav-dropdown">
+          {/* <NavDropdown  className={navbar.link_dim} title="Gallery" id="basic-nav-dropdown">
             <NavDropdown.Item href="/apartment">The Apartment</NavDropdown.Item>
             <NavDropdown.Item href="/surrounding">The Sourroundings</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="/instagram">Instagram</NavDropdown.Item>
-          </NavDropdown>
+          </NavDropdown> */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
