@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import mapStyles from './mapStyles.json';
 import classes from "./map.module.css";
-// import InfoWindow from "../InfoWindow/InfoWindow";
-// import agavi_pict from "../../assets/images/agavi_ext_square.jpg";
+import AgaviGreatPlace from "./AgaviGreatPlace";
+
+
 
 const getInfoWindowString = (place) => `
     <div class=${classes.infoWindow}>
@@ -14,9 +15,6 @@ const getInfoWindowString = (place) => `
         <div class=${classes.infoWindow_title}>
           ${place.name}
         </div>
-        <div class=${classes.infoWindow_text}>
-          ${place.formatted_address}
-        </div>
         <div style="font-size: 14px; color: grey;">
         <a href="${place.url}">Show on Google Maps</a>
         </div>
@@ -25,7 +23,8 @@ const getInfoWindowString = (place) => `
     <div> 
     `;
 
-// const getInfoWindowString = (place) => <InfoWindow/>;
+
+
 
 const createMapOptions=()=>(
     {   
@@ -54,10 +53,11 @@ const handleApiLoaded = (map, maps, places) => {
     });
   
     markers.forEach((marker, i) => {
-      marker.addListener('click', () => {
+      marker.addListener('mouseover', () => {
         infowindows[i].open(map, marker);
       });
     });
+
 };
 
 
@@ -80,6 +80,7 @@ const Map=(props)=>{
                 zoom={props.zoom}
                 options={createMapOptions}
             >
+              <AgaviGreatPlace lat={44.0962352} lng={9.869002200000001} />
             </GoogleMapReact>
         </div>     
     )

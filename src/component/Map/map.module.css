@@ -20,3 +20,15 @@
     color: #000000b5;
     width: 130px;
 }
+
+.agaviGreatPlace{
+    width: 200px;
+    font-family: 'Dancing Script', cursive;
+    font-size: x-large;
+    color: #f44336;
+    position: relative;
+    right: 80px;
+    bottom: 3px;
+    text-shadow: -1px -1px 0 #f90f0f, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
