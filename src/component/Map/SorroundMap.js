@@ -9,6 +9,20 @@ const Map=(props)=>{
 
   const [modalShow, setModalShow] = React.useState(false);
 
+  const getInfoWindowString = (place) => `
+    <div class=${classes.infoWindow}>
+      <div>
+        <div class=${classes.infoWindow_title}>
+          ${place.name}
+        </div>
+        <div style="font-size: 14px; color: grey;">
+        <p>Click into to info</p>
+        </div>
+      </div>
+      
+    <div> 
+  `;
+
   const createMapOptions=()=>(
     {   
         scrollwheel: false,
@@ -19,6 +33,7 @@ const Map=(props)=>{
 
   const handleApiLoaded = (map, maps, places) => {
     const markers = [];
+    const infowindows = [];
     
   
     places.forEach((place) => {
@@ -29,13 +44,28 @@ const Map=(props)=>{
         },
         map,
       }));
+
+      infowindows.push(new maps.InfoWindow({
+        content: getInfoWindowString(place),
+      }));
+
     });
   
     markers.forEach((marker, i) => {
       marker.addListener('click', () => {
         setModalShow(true);
       });
+
+      marker.addListener('mouseover', () => {
+        infowindows[i].open(map, marker);
+      });
+
+      marker.addListener('mouseout', () => {
+        infowindows[i].close();
+      });
+
     });
+
   };
 
   const MyVerticallyCenteredModal = (props) =>(

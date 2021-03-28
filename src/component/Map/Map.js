@@ -21,7 +21,7 @@ const getInfoWindowString = (place) => `
       </div>
       
     <div> 
-    `;
+  `;
 
 
 
