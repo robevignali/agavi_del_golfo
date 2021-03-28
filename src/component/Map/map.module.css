@@ -32,3 +32,8 @@
     text-shadow: -1px -1px 0 #f90f0f, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
+.popup{
+    text-align: center;
+    color: #f44336;
+}
+

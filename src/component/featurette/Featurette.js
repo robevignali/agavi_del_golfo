@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col"
 import Card from "react-bootstrap/Card"
 import Slideshow from '../slideshow/Slideshow';
 import Map from '../Map/Map';
+import SurroundingMap from '../Map/SorroundMap';
 
 
 const featurette=(props)=>(
@@ -61,6 +62,16 @@ const featurette=(props)=>(
     </Row>
     {props.map?
         <Map
+            height={'400px'}
+            width={'100%'}
+            places={props.places}
+            center={props.map_center}
+            zoom={props.map_zoom}
+        />
+    
+    :null}
+    {props.surroundingMap?
+        <SurroundingMap
             height={'400px'}
             width={'100%'}
             places={props.places}

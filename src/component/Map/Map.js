@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import mapStyles from './mapStyles.json';
 import classes from "./map.module.css";
@@ -29,7 +29,8 @@ const getInfoWindowString = (place) => `
 const createMapOptions=()=>(
     {   
         scrollwheel: false,
-        styles : mapStyles
+        styles : mapStyles,
+        fullscreenControl: false
         
     }
 )

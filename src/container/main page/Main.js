@@ -115,7 +115,7 @@ class App extends Component {
              Pisa, Florence and Genoa can be easily reached traveling by car or train. Furthermore, La Spezia is the ideal starting point to visit UNESCO heritage sites, such as Portovenere and Cinque Terre.
               The famous marble caves of Carrara are also at a short distance from La Spezia; about half an hour by car towards the Apuan Alps to experience their history and incredible views."
             images={this.state.thirdFeaturetteData}
-            map={true}
+            surroundingMap={true}
             places={places}
             map_center={agavi_coord}
             map_zoom={10}            
