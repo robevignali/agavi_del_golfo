@@ -37,3 +37,76 @@
     color: #f44336;
 }
 
+.modalTitle{
+    display: inline;
+    font-size: xxx-large;
+    font-family: 'Dancing Script', cursive;
+    color: #000a0485;
+    font-style: oblique;
+}
+
+.modalSubTitle{
+    margin: 20px;
+    display: inline;
+    font-family: 'Playfair Display';
+    font-size: large;
+    color: #05050585;
+}
+
+.modalText1{
+    font-size: large;
+    font-family: 'Playfair Display';
+    color: #000a0473;
+    text-align: justify;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+
+.modalText1Image{
+    float: right;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+
+.modalText2{
+    font-size: large;
+    font-family: 'Playfair Display';
+    color: #000a0473;
+    text-align: justify;
+    font-weight: 700;
+    line-height: 1.7;
+    margin-top: 20px;
+
+}
+
+
+.modalText2Image{
+    float: left;
+    width: 200px;
+    height: 200px;
+
+    margin: 10px;
+    margin-right: 20px;
+}
+
+.modalText3{
+    margin-top: 20px;
+    font-size: large;
+    font-family: 'Playfair Display';
+    color: #000a0473;
+    text-align: justify;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+
+.modalText3Image{
+    float: right;
+    width: 250px;
+    height: 150px;
+    margin: 10px;
+    margin-left: 20px;
+}
+

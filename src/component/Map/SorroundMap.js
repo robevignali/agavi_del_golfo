@@ -2,16 +2,22 @@ import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import mapStyles from './mapStyles.json';
 import classes from "./map.module.css";
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import PlaceModal from "./PlaceModal";
+// import Modal from 'react-bootstrap/Modal';
+// import Button from 'react-bootstrap/Button';
+// import Image from 'react-bootstrap/Image';
 
 const Map=(props)=>{
 
   const [modalShow, setModalShow] = React.useState(false);
+  const [placeToShow, setPlaceToShow] = React.useState({});
 
   const getInfoWindowString = (place) => `
     <div class=${classes.infoWindow}>
       <div>
+        <div>
+          <img class=${classes.infoWindow_image} src=${place.photo}/>
+        </div>
         <div class=${classes.infoWindow_title}>
           ${place.name}
         </div>
@@ -34,6 +40,7 @@ const Map=(props)=>{
   const handleApiLoaded = (map, maps, places) => {
     const markers = [];
     const infowindows = [];
+    const infoModal = [];
     
   
     places.forEach((place) => {
@@ -49,11 +56,15 @@ const Map=(props)=>{
         content: getInfoWindowString(place),
       }));
 
+      infoModal.push(place);
+
     });
   
     markers.forEach((marker, i) => {
       marker.addListener('click', () => {
+        setPlaceToShow(infoModal[i]);
         setModalShow(true);
+
       });
 
       marker.addListener('mouseover', () => {
@@ -68,32 +79,38 @@ const Map=(props)=>{
 
   };
 
-  const MyVerticallyCenteredModal = (props) =>(
-    <Modal 
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-        style={{zIndex: 10000}}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Modal heading
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <h4>Centered Modal</h4>
-          <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros.
-          </p>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={props.onHide}>Close</Button>
-        </Modal.Footer>
-    </Modal>
-  )
+  // const MyVerticallyCenteredModal = (props) =>(
+  //   <Modal 
+  //       {...props}
+  //       size="lg"
+  //       aria-labelledby="contained-modal-title-vcenter"
+  //       centered
+  //     >
+  //       <Modal.Header closeButton>
+  //         <Modal.Title id="contained-modal-title-vcenter">
+  //           <div className={classes.modalTitle}>{placeToShow.name}</div>
+  //           <div className={classes.modalSubTitle}>{placeToShow.formatted_address}</div>
+  //         </Modal.Title>
+  //       </Modal.Header>
+  //       <Modal.Body>
+  //         <div className={classes.modalText1}>
+  //           <Image className={classes.modalText1Image} src={placeToShow.text_image1} roundedCircle/>
+  //           {placeToShow.text1}
+  //         </div>
+  //         <div className={classes.modalText2}>
+  //           <Image className={classes.modalText2Image} src={placeToShow.text_image2} rounded/>
+  //           {placeToShow.text2}  
+  //         </div>
+  //         <div className={classes.modalText3}>
+  //           <Image className={classes.modalText3Image} src={placeToShow.text_image3} rounded/>
+  //           {placeToShow.text3}  
+  //         </div>
+  //       </Modal.Body>
+  //       <Modal.Footer>
+  //         <Button variant="secondary" onClick={props.onHide}>Close</Button>
+  //       </Modal.Footer>
+  //   </Modal>
+  // )
   
 
     return (
@@ -105,9 +122,10 @@ const Map=(props)=>{
                 paddingTop: '40px'
             }
         }>
-          <MyVerticallyCenteredModal
+          <PlaceModal
             show={modalShow}
             onHide={() => setModalShow(false)}
+            place={placeToShow}
           />
           <GoogleMapReact
               yesIWantToUseGoogleMapApiInternals
