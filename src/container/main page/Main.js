@@ -69,7 +69,12 @@ class App extends Component {
             fade={true}
             data={this.state.slideshowData}
           />
-          <HighlightStrip id="team"/>
+          <HighlightStrip
+             id="team"
+             text1="Soprano and vocal techniques researcher, Felicita lives between La Spezia and Sweden. She is always delightful to help with tips about places to visit during your stay."
+             text2="Ombretta is a former GP, now enjoying her retirement. She is fond of gardening and takes care of the beautiful agave plants you will spot around the building. She lives upstairs with Lulu."
+             text3="Lulu is the mascot of Le Agavi del Golfo. She is a deeply rooted member of the family and spends most of the time with Ombretta, pretending to be interested in gardening."
+             />
           <div  className={classes.divider}/>
           <Featurette
             id="apartment"
@@ -108,7 +113,7 @@ class App extends Component {
             id="surrounding"
             leftImg={false}
             rightImg={true}
-            spacing="100px" 
+            spacing="30px" 
             title="The Surroundings"
             text="Our apartment is in the province of La Spezia. 
             Due to its location, La Spezia is a strategic place if you want to explore Liguria and Tuscany.

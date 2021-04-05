@@ -32,11 +32,7 @@ const highlightStrip=(props)=>(
                 <Card.ImgOverlay>
                     <Card.Title className={classes.highlightStrip__name}>Felicita</Card.Title>
                     <Card.Text className={classes.highlightStrip__text}>
-                    <h5>With supporting text below as a natural lead-in to additional content.
-                        With supporting text below as a natural lead-in to additional content.
-                        With supporting text below as a natural lead-in to additional content.
-                        With supporting text below as a natural lead-in to additional content.
-                    </h5>
+                    <h5>{props.text1}</h5>
                     </Card.Text>
                 </Card.ImgOverlay>    
                 </Card.Body>
@@ -54,11 +50,7 @@ const highlightStrip=(props)=>(
                     <Card.ImgOverlay>
                         <Card.Title className={classes.highlightStrip__name}>Ombretta</Card.Title>
                         <Card.Text className={classes.highlightStrip__text}>
-                        <h5>With supporting text below as a natural lead-in to additional content.
-                        With supporting text below as a natural lead-in to additional content.
-                        With supporting text below as a natural lead-in to additional content.
-                        With supporting text below as a natural lead-in to additional content.
-                        </h5>
+                        <h5>{props.text2}</h5>
                         </Card.Text>
                     </Card.ImgOverlay>   
                 </Card.Body>
@@ -76,11 +68,7 @@ const highlightStrip=(props)=>(
                 <Card.ImgOverlay>
                     <Card.Title className={classes.highlightStrip__name}>Lulu</Card.Title>
                     <Card.Text className={classes.highlightStrip__text}>
-                    <h5>With supporting text below as a natural lead-in to additional content.
-                    With supporting text below as a natural lead-in to additional content.
-                    With supporting text below as a natural lead-in to additional content.
-                    With supporting text below as a natural lead-in to additional content.
-                    </h5>
+                    <h5>{props.text3}</h5>
                     </Card.Text>
                 </Card.ImgOverlay>   
                 </Card.Body>
