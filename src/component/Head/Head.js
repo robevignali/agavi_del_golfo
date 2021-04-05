@@ -111,28 +111,25 @@ const Head=(props)=>{
                     duration={500}
                   >Location</Link>
           </Nav.Link>
-          <NavDropdown  className={navbar.link_dim} title="Surrounding" id="basic-nav-dropdown">
-            <NavDropdown.Item>
-            <Link
-                  //activeClass="active"
-                  to="surrounding"
-                  //spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >Surrounding</Link>
-            </NavDropdown.Item>
-            <NavDropdown.Item href="">Day Trip</NavDropdown.Item>
-          </NavDropdown>
           <Nav.Link className={navbar.link_dim}>
-          <Link
-                  //activeClass="active"
-                  to="pricing"
-                  //spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >Pricing</Link>
+            <Link
+                    //activeClass="active"
+                    to="surrounding"
+                    //spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >Surrounding</Link>
+            </Nav.Link>
+          <Nav.Link className={navbar.link_dim}>
+            <Link
+                    //activeClass="active"
+                    to="pricing"
+                    //spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >Pricing</Link>
           </Nav.Link>
           <Nav.Link className={navbar.link_dim}>
           <Link
