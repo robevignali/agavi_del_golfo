@@ -32,53 +32,66 @@ const Pricing=(props)=>{
                 <Col></Col>
                 <Col xs={8}>
                     <h1 className={classes.head}>Pricing</h1>
-                    <p className={classes.text}>Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
+                    <h5 className={classes.text}>Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</h5>
                 </Col>
                 <Col></Col>
             </Row>
             <Row>
                 <Col>
                     <Card className={classes.card}>
-                        <Card.Header>CLASSIC OFFER</Card.Header>
+                        <Card.Header>
+                            <h3 className={classes.card_head}>CLASSIC OFFER</h3>
+                        </Card.Header>
                         <Card.Body>
-                            <Card.Title>One Day</Card.Title>
-                            
-                            <Card.Text>110€</Card.Text>
-                            <Card.Text>+ 5€ per additional guest</Card.Text>
-                            <Card.Text>up to 6 guests</Card.Text>
-                            <Card.Text>tourist tax not included</Card.Text> 
-                            
-                            <Button onClick={openModal} variant="primary">Email me to order!</Button>
+                        <Card.Img  className={classes.card_overlay} src="https://i.postimg.cc/tTMnYczw/8rgt-n9jh-130928.jpg" />
+                        <Card.ImgOverlay style={{top: '80px'}}>
+                            <Card.Title> <h5 className={classes.card_title}>One Day</h5></Card.Title>
+                            <Card.Text> <h2 className={classes.card_text}>110€</h2></Card.Text>
+                            <Card.Text> <h5 className={classes.card_text}>+ 5€ per additional guest</h5></Card.Text>
+                            <Card.Text> <h5 className={classes.card_text}>up to 6 guests</h5></Card.Text>
+                            <Card.Text> <h5 className={classes.card_text}>tourist tax not included</h5></Card.Text> 
+                            <Button style={{ margin: '50px'}}onClick={openModal} variant="secondary">Email me to order!</Button>
+                        </Card.ImgOverlay>
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col>
                     <Card className={classes.card}>
-                        <Card.Header>SPECIAL OFFER</Card.Header>
+                        <Card.Header>
+                            <h3 className={classes.card_head}>SPECIAL OFFER</h3>
+                        </Card.Header>
                         <Card.Body>
-                            <Card.Title>One Week</Card.Title>
-                                <Card.Text>100€ / DAY</Card.Text>
-                                <Card.Text>+ 3€ per additional guest</Card.Text>
-                                <Card.Text>up to 6 guests</Card.Text>
-                                <Card.Text>tourist tax not included</Card.Text>
-                            <Button onClick={openModal} variant="primary">Email me to order!</Button>
+                        <Card.Img  className={classes.card_overlay} src="https://i.postimg.cc/tTMnYczw/8rgt-n9jh-130928.jpg" />
+                        <Card.ImgOverlay style={{top: '80px'}}>
+                            <Card.Title> <h5 className={classes.card_title}>One Week</h5></Card.Title>
+                            <Card.Text> <h2 className={classes.card_text}>100€</h2></Card.Text>
+                            <Card.Text> <h5 className={classes.card_text}>+ 3€ per additional guest</h5></Card.Text>
+                            <Card.Text> <h5 className={classes.card_text}>up to 6 guests</h5></Card.Text>
+                            <Card.Text> <h5 className={classes.card_text}>tourist tax not included</h5></Card.Text> 
+                            <Button style={{ margin: '50px'}}onClick={openModal} variant="secondary">Email me to order!</Button>
+                        </Card.ImgOverlay>
                         </Card.Body>
-                    </Card>                
+                    </Card>
                 </Col>
                 <Col>
                     <Card className={classes.card}>
-                        <Card.Header>TAILOR MADE OFFER</Card.Header>
+                        <Card.Header>
+                            <h3 className={classes.card_head}>TAILOR MADE OFFER</h3>
+                        </Card.Header>
                         <Card.Body>
-                            <Card.Title>Long Stay</Card.Title>
-                            <Card.Text>EMAIL US!</Card.Text>
-                            <Card.Text>Contact us for a special rebate</Card.Text>
-                            <Card.Text>up to 6 guest</Card.Text>
-                            <Card.Text>tourist tax not included</Card.Text>
-                            
-                            <Button onClick={openModal} variant="primary">Email me to order!</Button>
+                        <Card.Img  className={classes.card_overlay} src="https://i.postimg.cc/tTMnYczw/8rgt-n9jh-130928.jpg" />
+                        <Card.ImgOverlay style={{top: '80px'}}>
+                            <Card.Title> <h5 className={classes.card_title}>Long Stay</h5></Card.Title>
+                            <Card.Text> <h4 className={classes.card_text}>EMAIL US!</h4></Card.Text>
+                            <Card.Text> <h5 className={classes.card_text}>Contact us for a special rebate</h5></Card.Text>
+                            <Card.Text> <h5 className={classes.card_text}>up to 6 guests</h5></Card.Text>
+                            <Card.Text> <h5 className={classes.card_text}>tourist tax not included</h5></Card.Text> 
+                            <Button style={{ margin: '50px'}}onClick={openModal} variant="secondary">Email me to order!</Button>
+                        </Card.ImgOverlay>
                         </Card.Body>
-                    </Card>                   
+                    </Card>
                 </Col>
+                
             </Row>
             
         </Container>

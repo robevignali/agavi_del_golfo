@@ -1,16 +1,38 @@
 .head {
+    font-family: 'Playfair Display', serif;
+    color: #0a0a0a9e;
     text-align: center;
-    font-weight: 300;
-    line-height: 1.2;
-    font-size: 3.5rem;
+    font-size: xxx-large;
 }
 
 .text {
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: 300;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    color: #0000009e;
+    text-align: justify;
+    font-family: 'Playfair Display', serif;
 }
 
 .card {
     text-align: center;
+}
+
+.card_head{
+    font-family: 'Playfair Display', serif;
+    color: #0a0a0a9e;
+}
+
+.card_title{
+    font-size: xx-large;
+    font-family: 'Playfair Display', serif;
+    color: #0a0a0a9e;
+}
+
+.card_text{
+    font-family: 'Playfair Display', serif;
+    color: #0a0a0a8c;
+}
+
+.card_overlay{
+    opacity: 0.15;
 }
