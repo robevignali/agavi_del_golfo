@@ -10,6 +10,8 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import emailjs from 'emailjs-com';
 import Spinner from 'react-bootstrap/Spinner';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 
  
@@ -19,6 +21,8 @@ const Emailform = props =>{
     const [user_mail, setUser_mail] = useState ('');
     const [message, setMessage] = useState ('');
     const [isLoading, setIsLoading] = useState (false);
+    const [startDate, setStartDate] = useState(new Date());
+    const [stopDate, setStopDate] = useState(new Date());
 
     const handleSubmit=(e)=> {
         setIsLoading(true);
@@ -62,11 +66,13 @@ const Emailform = props =>{
         >
             <Modal.Header closeButton>
                 <Modal.Title>
-                    Send an email to us
+                    <h1>{props.data.title?props.data.title:null}</h1>
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                
+                <h4>{props.data.text_1?props.data.text_1:null}</h4>
+                <h4>{props.data.text_2?props.data.text_2:null}</h4>
+                <h4>{props.data.text_3?props.data.text_3:null}</h4>
                 <Form onSubmit={handleSubmit}>
                 <Form.Row>
                     <Form.Group as={Col} controlId="user_name">
@@ -88,6 +94,10 @@ const Emailform = props =>{
                             value={user_mail}
                             />
                     </Form.Group>
+                </Form.Row>
+                <Form.Row>
+                <div><h6>Start date</h6><DatePicker selected={startDate} onChange={date => setStartDate(date)} /></div>
+                <div><h6>Stop date</h6><DatePicker selected={stopDate} onChange={date => setStopDate(date)} /></div>
                 </Form.Row>
                 <Form.Group controlId="message">
                     <Form.Control 
