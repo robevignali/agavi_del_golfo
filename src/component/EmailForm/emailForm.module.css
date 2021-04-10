@@ -1,0 +1,27 @@
+.title{
+    font-size: xx-large;
+    font-family: 'Playfair Display', serif;
+    color: #0a0a0a9e;
+}
+
+.body{
+    font-family: 'Playfair Display', serif;
+    color: #0a0a0a8c;
+}
+
+.text{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.card_overlay{
+    opacity: 0.15;
+}
+
+.dataPicker{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: #dfe2dc;
+    color: #7b7b7b;
+}

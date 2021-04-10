@@ -55,7 +55,7 @@ const Pricing=(props)=>{
                                 style={{ margin: '50px'}}
                                 onClick={()=>{
                                     setPrecompiledForm({
-                                        title: "I choice the Classic Offer !",
+                                        title: "I've choice the Classic Offer !",
                                         text_1: "One day for 110€ and 5€ per additional guest (up to 6 guest)",
                                         text_2: "Turist tax not included"
                                     });
