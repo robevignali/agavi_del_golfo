@@ -9,6 +9,7 @@ import Card from 'react-bootstrap/Card';
 import felicita from '../../assets/images/Feli.jpg';
 import ombretta from '../../assets/images/ombretta.jpg';
 import lulu from '../../assets/images/lulu.jpg';
+import agave from '../../assets/images/agave.jpg';
 
 
 const highlightStrip=(props)=>(
@@ -28,7 +29,7 @@ const highlightStrip=(props)=>(
                 />
                 <Card  border="light" >
                 <Card.Body style={{paddingTop:'0'}}>
-                <Card.Img  className={classes.highlightStrip__overlay} src="https://i.postimg.cc/tTMnYczw/8rgt-n9jh-130928.jpg" /> 
+                <Card.Img  className={classes.highlightStrip__overlay} src={agave} /> 
                 <Card.ImgOverlay>
                     <Card.Title className={classes.highlightStrip__name}>Felicita</Card.Title>
                     <Card.Text className={classes.highlightStrip__text}>
@@ -46,7 +47,7 @@ const highlightStrip=(props)=>(
                 />
                 <Card border="light">
                 <Card.Body style={{paddingTop:'0'}}>
-                    <Card.Img  className={classes.highlightStrip__overlay} src="https://i.postimg.cc/tTMnYczw/8rgt-n9jh-130928.jpg" /> 
+                    <Card.Img  className={classes.highlightStrip__overlay} src={agave} /> 
                     <Card.ImgOverlay>
                         <Card.Title className={classes.highlightStrip__name}>Ombretta</Card.Title>
                         <Card.Text className={classes.highlightStrip__text}>
@@ -64,7 +65,7 @@ const highlightStrip=(props)=>(
                 />
                 <Card border="light">
                 <Card.Body style={{paddingTop:'0'}}>
-                <Card.Img  className={classes.highlightStrip__overlay} src="https://i.postimg.cc/tTMnYczw/8rgt-n9jh-130928.jpg" /> 
+                <Card.Img  className={classes.highlightStrip__overlay} src={agave} /> 
                 <Card.ImgOverlay>
                     <Card.Title className={classes.highlightStrip__name}>Lulu</Card.Title>
                     <Card.Text className={classes.highlightStrip__text}>

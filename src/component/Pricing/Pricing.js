@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import EmailForm from "../../component/EmailForm/EmailForm";
+import agave from '../../assets/images/agave.jpg';
 
 
 const Pricing=(props)=>{
@@ -44,7 +45,7 @@ const Pricing=(props)=>{
                             <h3 className={classes.card_head}>CLASSIC OFFER</h3>
                         </Card.Header>
                         <Card.Body>
-                        <Card.Img  className={classes.card_overlay} src="https://i.postimg.cc/tTMnYczw/8rgt-n9jh-130928.jpg" />
+                        <Card.Img  className={classes.card_overlay} src={agave} />
                         <Card.ImgOverlay style={{top: '80px'}}>
                             <Card.Title> <h5 className={classes.card_title}>One Day</h5></Card.Title>
                             <Card.Text> <h2 className={classes.card_text}>110€</h2></Card.Text>
@@ -76,7 +77,7 @@ const Pricing=(props)=>{
                             <h3 className={classes.card_head}>SPECIAL OFFER</h3>
                         </Card.Header>
                         <Card.Body>
-                        <Card.Img  className={classes.card_overlay} src="https://i.postimg.cc/tTMnYczw/8rgt-n9jh-130928.jpg" />
+                        <Card.Img  className={classes.card_overlay} src={agave} />
                         <Card.ImgOverlay style={{top: '80px'}}>
                             <Card.Title> <h5 className={classes.card_title}>One Week</h5></Card.Title>
                             <Card.Text> <h2 className={classes.card_text}>100€</h2></Card.Text>
@@ -104,7 +105,7 @@ const Pricing=(props)=>{
                             <h3 className={classes.card_head}>TAILOR MADE OFFER</h3>
                         </Card.Header>
                         <Card.Body>
-                        <Card.Img  className={classes.card_overlay} src="https://i.postimg.cc/tTMnYczw/8rgt-n9jh-130928.jpg" />
+                        <Card.Img  className={classes.card_overlay} src={agave} />
                         <Card.ImgOverlay style={{top: '80px'}}>
                             <Card.Title> <h5 className={classes.card_title}>Long Stay</h5></Card.Title>
                             <Card.Text> <h4 className={classes.card_text}>EMAIL US!</h4></Card.Text>

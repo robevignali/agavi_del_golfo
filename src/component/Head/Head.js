@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Image from 'react-bootstrap/Image';
 import { Link, animateScroll as scroll } from "react-scroll";
+import agave from '../../assets/images/agave.jpg';
 
 
 const Head=(props)=>{
@@ -56,7 +57,7 @@ const Head=(props)=>{
       <Navbar.Brand >
         <Image
           className={classes.navbar} 
-          src="https://i.postimg.cc/LXFvm9Dh/8rgt-n9jh-130928.jpg" 
+          src={agave}
           width={navbar.image_width}
           height={navbar.image_height}
           roundedCircle 

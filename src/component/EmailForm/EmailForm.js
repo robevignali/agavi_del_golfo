@@ -14,6 +14,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Card } from 'react-bootstrap';
+import agave from '../../assets/images/agave.jpg';
 
 
  
@@ -81,7 +82,7 @@ const Emailform = props =>{
             <Modal.Body>
                 <Card >
                     <Card.Body className={classes.body}>
-                        <Card.Img  className={classes.card_overlay} src="https://i.postimg.cc/tTMnYczw/8rgt-n9jh-130928.jpg" />
+                        <Card.Img  className={classes.card_overlay} src={agave} />
                         <Card.ImgOverlay>
                             <div className={classes.text}>
                                 <h5>{props.data.text_1?props.data.text_1:null}</h5>
