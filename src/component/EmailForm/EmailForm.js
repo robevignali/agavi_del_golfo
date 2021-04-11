@@ -49,7 +49,7 @@ const Emailform = props =>{
             'user_1c42fyO9mldeRDtsAIOqU'
          ).then((res)=>{
              setIsLoading(false);
-             
+             props.handleClose();
             },
             (error)=>{
                 setIsLoading(false);
@@ -74,7 +74,7 @@ const Emailform = props =>{
         onHide={props.handleClose}
         // size="lg"
         >
-            <Modal.Header closeButton>
+            <Modal.Header className={classes.header} closeButton>
                 <Modal.Title>
                     <h1 className={classes.title}>{props.data.title?props.data.title:null}</h1>
                 </Modal.Title>
@@ -85,14 +85,16 @@ const Emailform = props =>{
                         <Card.Img  className={classes.card_overlay} src={agave} />
                         <Card.ImgOverlay>
                             <div className={classes.text}>
-                                <h5>{props.data.text_1?props.data.text_1:null}</h5>
-                                <h5>{props.data.text_2?props.data.text_2:null}</h5>
-                                <h5>{props.data.text_3?props.data.text_3:null}</h5>
+                                <h6>{props.data.text_1?props.data.text_1:null}</h6>
+                                <h6>{props.data.text_2?props.data.text_2:null}</h6>
+                                <h6>{props.data.text_3?props.data.text_3:null}</h6>
                             </div>
                             <Form onSubmit={handleSubmit}>
                                 <Form.Row>
                                     <Form.Group as={Col} controlId="user_name">
-                                        <Form.Label size="sm">Name</Form.Label>
+                                        <Form.Label>
+                                            <div className={classes.label}>Name</div>
+                                        </Form.Label>
                                         <Form.Control 
                                             size="sm" 
                                             onChange={(e)=>{setUser_name(e.target.value)}}
@@ -101,7 +103,9 @@ const Emailform = props =>{
                                     </Form.Group>
 
                                     <Form.Group as={Col} controlId="user_mail">
-                                        <Form.Label size="sm">Email</Form.Label>
+                                        <Form.Label>
+                                            <div className={classes.label}>Email</div>
+                                        </Form.Label>
                                         <Form.Control 
                                             size="sm" 
                                             onChange={(e)=>{setUser_mail(e.target.value)}}
@@ -112,7 +116,9 @@ const Emailform = props =>{
 
                                 <Form.Row>
                                     <Form.Group as={Col}>
-                                        <Form.Label size="sm">Start date</Form.Label>
+                                        <Form.Label>
+                                            <div className={classes.label}>Start date</div>
+                                        </Form.Label>
                                         <DatePicker 
                                             className={classes.dataPicker} 
                                             selected={startDate}
@@ -121,7 +127,9 @@ const Emailform = props =>{
                                             />
                                     </Form.Group>
                                     <Form.Group as={Col}>
-                                    <Form.Label size="sm">Stop date</Form.Label>
+                                    <Form.Label size="sm">
+                                        <div className={classes.label}>Stop date</div>
+                                    </Form.Label>
                                         <DatePicker 
                                             className={classes.dataPicker} 
                                             selected={stopDate}
@@ -140,18 +148,19 @@ const Emailform = props =>{
                                         value={message}
                                         />
                                 </Form.Group>
-
-                            <Button variant="primary" type="submit">
-                                {isLoading? 
-                                    <Spinner
-                                        as="span"
-                                        animation="border"
-                                        size="sm"
-                                        role="status"
-                                        aria-hidden="true"
-                                    />: <p>submit</p>
-                                }
-                            </Button>
+                            <div style={{textAlign:"center"}}>
+                                <Button variant="secondary" type="submit">
+                                    {isLoading? 
+                                        <Spinner
+                                            as="span"
+                                            animation="border"
+                                            size="sm"
+                                            role="status"
+                                            aria-hidden="true"
+                                        />: <div>submit</div>
+                                    }
+                                </Button>
+                            </div>
 
                             </Form>
                         </Card.ImgOverlay>
