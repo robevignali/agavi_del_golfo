@@ -26,11 +26,20 @@ const Emailform = props =>{
     const [isLoading, setIsLoading] = useState (false);
     const [startDate, setStartDate] = useState(new Date);
     const [stopDate, setStopDate] = useState(new Date);
+    const [validated, setValidated] = useState(false);
 
     const handleSubmit=(e)=> {
+
         setIsLoading(true);
-        e.preventDefault()
-        
+        e.preventDefault();
+
+        const form = e.currentTarget;
+        if (form.checkValidity() === false) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        setValidated(true);
+
         let templateParams = {
             title: props.data.title,
             text_1: props.data.text_1,
@@ -89,13 +98,14 @@ const Emailform = props =>{
                                 <h6>{props.data.text_2?props.data.text_2:null}</h6>
                                 <h6>{props.data.text_3?props.data.text_3:null}</h6>
                             </div>
-                            <Form onSubmit={handleSubmit}>
+                            <Form noValidate validated={validated} onSubmit={handleSubmit}>
                                 <Form.Row>
                                     <Form.Group as={Col} controlId="user_name">
                                         <Form.Label>
                                             <div className={classes.label}>Name</div>
                                         </Form.Label>
-                                        <Form.Control 
+                                        <Form.Control
+                                            required 
                                             size="sm" 
                                             onChange={(e)=>{setUser_name(e.target.value)}}
                                             value={user_name}
@@ -106,7 +116,8 @@ const Emailform = props =>{
                                         <Form.Label>
                                             <div className={classes.label}>Email</div>
                                         </Form.Label>
-                                        <Form.Control 
+                                        <Form.Control
+                                            required 
                                             size="sm" 
                                             onChange={(e)=>{setUser_mail(e.target.value)}}
                                             value={user_mail}
