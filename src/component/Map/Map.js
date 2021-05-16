@@ -76,7 +76,7 @@ const Map=(props)=>{
             <GoogleMapReact
                 yesIWantToUseGoogleMapApiInternals
                 onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps, props.places.results)}
-                bootstrapURLKeys={{ key: 'AIzaSyB8QGkVKMgJ3B7EnSPSWPSCLe2SL_kwUsg' }}
+                bootstrapURLKeys={{ key: 'AIzaSyA2g_XnZaBjK9wu0StIIQfjs0MG3XoypNw' }}
                 defaultCenter={props.center}
                 zoom={props.zoom}
                 options={createMapOptions}
