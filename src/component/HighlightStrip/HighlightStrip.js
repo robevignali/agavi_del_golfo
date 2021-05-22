@@ -14,7 +14,7 @@ import agave from '../../assets/images/agave.jpg';
 
 const highlightStrip=(props)=>(
     <div id={props.id}>
-    <Container fluid className={classes.highlightStrip}>
+    <Container className={classes.highlightStrip}>
         <div className={classes.highlightStrip__title}>
             <h1 className={classes.highlightStrip__title__text}>
                 Our Team is our Family
