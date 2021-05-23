@@ -31,29 +31,27 @@ const Pricing=(props)=>{
             />
 
             <Row>
-                <Col></Col>
-                <Col xs={8}>
+                <Col className='d-md-block d-sm-none'></Col>
+                <Col sm md={12} lg={8}>
                     <h1 className={classes.head}>Pricing</h1>
                     <h5 className={classes.text}>Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</h5>
                 </Col>
-                <Col></Col>
+                <Col className='d-md-block d-sm-none'></Col>
             </Row>
-            <Row>
-                <Col>
+            <Row >
+                <Col sm={12} md={4}>
                     <Card className={classes.card}>
                         <Card.Header>
                             <h3 className={classes.card_head}>CLASSIC OFFER</h3>
                         </Card.Header>
-                        <Card.Body>
-                        <Card.Img  className={classes.card_overlay} src={agave} />
-                        <Card.ImgOverlay style={{top: '80px'}}>
+                        <Card.Body className={classes.card_body}>
                             <Card.Title> <h5 className={classes.card_title}>One Day</h5></Card.Title>
                             <Card.Text> <h2 className={classes.card_text}>110€</h2></Card.Text>
                             <Card.Text> <h5 className={classes.card_text}>+ 5€ per additional guest</h5></Card.Text>
                             <Card.Text> <h5 className={classes.card_text}>up to 6 guests</h5></Card.Text>
                             <Card.Text> <h5 className={classes.card_text}>tourist tax not included</h5></Card.Text> 
                             <Button 
-                                style={{ margin: '50px'}}
+                                // style={{ margin: '50px'}}
                                 onClick={()=>{
                                     setPrecompiledForm({
                                         title: "I've choice the Classic Offer !",
@@ -66,26 +64,22 @@ const Pricing=(props)=>{
                             >
                                 Email me to order!
                             </Button>
-                            {/* <Button style={{ margin: '50px'}}onClick={openMailForm} variant="secondary">Email me to order!</Button> */}
-                        </Card.ImgOverlay>
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col>
+                <Col sm={12} md={4}>
                     <Card className={classes.card}>
                         <Card.Header>
                             <h3 className={classes.card_head}>SPECIAL OFFER</h3>
                         </Card.Header>
-                        <Card.Body>
-                        <Card.Img  className={classes.card_overlay} src={agave} />
-                        <Card.ImgOverlay style={{top: '80px'}}>
+                        <Card.Body className={classes.card_body}>
                             <Card.Title> <h5 className={classes.card_title}>One Week</h5></Card.Title>
                             <Card.Text> <h2 className={classes.card_text}>100€</h2></Card.Text>
                             <Card.Text> <h5 className={classes.card_text}>+ 3€ per additional guest</h5></Card.Text>
                             <Card.Text> <h5 className={classes.card_text}>up to 6 guests</h5></Card.Text>
                             <Card.Text> <h5 className={classes.card_text}>tourist tax not included</h5></Card.Text> 
                             <Button 
-                                style={{ margin: '50px'}}
+                                
                                 onClick={()=>{
                                     const preCompText="Hello Word";
                                     setPrecompiledForm({title: preCompText});
@@ -95,25 +89,22 @@ const Pricing=(props)=>{
                             >
                                 Email me to order!
                             </Button>
-                        </Card.ImgOverlay>
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col>
+                <Col sm={12} md={4}>
                     <Card className={classes.card}>
                         <Card.Header>
-                            <h3 className={classes.card_head}>TAILOR MADE OFFER</h3>
+                            <h3 className={classes.card_head}>TAILOR MADE</h3>
                         </Card.Header>
-                        <Card.Body>
-                        <Card.Img  className={classes.card_overlay} src={agave} />
-                        <Card.ImgOverlay style={{top: '80px'}}>
+                        <Card.Body className={classes.card_body}>
                             <Card.Title> <h5 className={classes.card_title}>Long Stay</h5></Card.Title>
-                            <Card.Text> <h4 className={classes.card_text}>EMAIL US!</h4></Card.Text>
-                            <Card.Text> <h5 className={classes.card_text}>Contact us for a special rebate</h5></Card.Text>
+                            <Card.Text> <h2 className={classes.card_text}>EMAIL US!</h2></Card.Text>
+                            <Card.Text> <h5 className={classes.card_text}>Contact us for a rebate</h5></Card.Text>
                             <Card.Text> <h5 className={classes.card_text}>up to 6 guests</h5></Card.Text>
                             <Card.Text> <h5 className={classes.card_text}>tourist tax not included</h5></Card.Text> 
                             <Button 
-                                style={{ margin: '50px'}}
+                                // style={{ margin: '50px'}}
                                 onClick={()=>{
                                     const preCompText="Te Pae";
                                     setPrecompiledForm({title: preCompText});
@@ -123,8 +114,6 @@ const Pricing=(props)=>{
                             >
                                 Email me to order!
                             </Button>
-                            {/* <Button style={{ margin: '50px'}}onClick={openMailForm} variant="secondary">Email me to order!</Button> */}
-                        </Card.ImgOverlay>
                         </Card.Body>
                     </Card>
                 </Col>

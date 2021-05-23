@@ -15,11 +15,16 @@
 
 .card {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .card_head{
     font-family: 'Playfair Display', serif;
     color: #0a0a0a9e;
+}
+
+.card_body{
+    background-color: #ebf5e7;
 }
 
 .card_title{
@@ -28,11 +33,16 @@
     color: #0a0a0a9e;
 }
 
+
+
 .card_text{
     font-family: 'Playfair Display', serif;
     color: #0a0a0a8c;
 }
 
+
+
 .card_overlay{
     opacity: 0.15;
+    
 }
