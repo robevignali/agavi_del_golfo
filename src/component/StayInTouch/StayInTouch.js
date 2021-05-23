@@ -89,7 +89,7 @@ const StayInTouch = props => {
                                 value={message}
                                 />
                         </Form.Group>
-                        <Button variant="primary" type="submit" block>
+                        <Button variant="secondary" type="submit" block>
                             {isLoading? 
                                 <Spinner
                                     as="span"
@@ -97,7 +97,7 @@ const StayInTouch = props => {
                                     size="sm"
                                     role="status"
                                     aria-hidden="true"
-                                />: <p>submit</p>
+                                />: <p className={classes.button}>Email me !</p>
                             }
                         </Button>
                     </Form>
