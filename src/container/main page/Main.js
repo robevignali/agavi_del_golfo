@@ -75,7 +75,7 @@ class App extends Component {
              text2="Ombretta is a former GP, now enjoying her retirement. She is fond of gardening and takes care of the beautiful agave plants you will spot around the building. She lives upstairs with Lulu."
              text3="Lulu is the mascot of Le Agavi del Golfo. She is a deeply rooted member of the family and spends most of the time with Ombretta, pretending to be interested in gardening."
              />
-          <div  className={classes.divider}/>
+          {/* <div  className={classes.divider}/> */}
           <Featurette
             id="apartment"
             leftImg={false}
@@ -87,7 +87,7 @@ class App extends Component {
             The Wi-Fi internet connection is available"
             images={this.state.firstFeaturetteData}
             />
-          <div className={classes.divider}/>
+          {/* <div className={classes.divider}/> */}
           <Featurette
             id="location"
             leftImg={true}
@@ -108,7 +108,7 @@ class App extends Component {
             map_zoom={13}
             infoWindow_pict={agavi_pict}
             />
-          <div className={classes.divider}/>
+          {/* <div className={classes.divider}/> */}
           <Featurette
             id="surrounding"
             leftImg={false}
@@ -125,9 +125,9 @@ class App extends Component {
             map_center={agavi_coord}
             map_zoom={10}            
           />
-          <div className={classes.divider}/>
+          {/* <div className={classes.divider}/> */}
           <Pricing id="pricing"/>
-          <div className={classes.divider}/>
+          {/* <div className={classes.divider}/> */}
           <StayInTouch id="getInTouch"/>
           <Footer/>
       </div>

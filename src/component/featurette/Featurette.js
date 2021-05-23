@@ -8,10 +8,11 @@ import Card from "react-bootstrap/Card"
 import Slideshow from '../slideshow/Slideshow';
 import Map from '../Map/Map';
 import SurroundingMap from '../Map/SorroundMap';
-
+import Divider from "../Divider/Divider";
 
 const featurette=(props)=>(
 <div id={props.id}>
+<Divider/>
 <Container className={classes.feature__container}>
     <Row>
         {props.leftImg?

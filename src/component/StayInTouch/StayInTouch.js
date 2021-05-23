@@ -9,6 +9,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 import emailjs from 'emailjs-com';
+import Divider from "../Divider/Divider";
 
 const StayInTouch = props => {
 
@@ -52,6 +53,7 @@ const StayInTouch = props => {
 
     return (
         <div id={props.id}>
+        <Divider/>
         <Container>
             <Row>
                 <Col></Col>

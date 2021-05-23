@@ -7,7 +7,8 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import EmailForm from "../../component/EmailForm/EmailForm";
-import agave from '../../assets/images/agave.jpg';
+import Divider from "../Divider/Divider";
+// import agave from '../../assets/images/agave.jpg';
 
 
 const Pricing=(props)=>{
@@ -23,13 +24,14 @@ const Pricing=(props)=>{
 
     return (
         <div id={props.id}>
+        <Divider />
         <Container>
             <EmailForm
                 isOpen={modalOpen} 
                 handleClose={closeModal}
                 data={data}
             />
-
+            
             <Row>
                 <Col className='d-md-block d-sm-none'></Col>
                 <Col sm md={12} lg={8}>
