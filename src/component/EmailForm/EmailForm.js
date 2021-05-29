@@ -29,16 +29,22 @@ const Emailform = props =>{
     const [validated, setValidated] = useState(false);
 
     const handleSubmit=(e)=> {
-
-        setIsLoading(true);
         e.preventDefault();
-
         const form = e.currentTarget;
+
         if (form.checkValidity() === false) {
-            e.preventDefault();
+            // e.preventDefault();
             e.stopPropagation();
-          }
-        setValidated(true);
+            setValidated(true);
+        }else{
+
+        
+        setValidated(false);
+        setIsLoading(true);
+        
+        
+
+
 
         let templateParams = {
             title: props.data.title,
@@ -58,14 +64,15 @@ const Emailform = props =>{
             'user_1c42fyO9mldeRDtsAIOqU'
          ).then((res)=>{
              setIsLoading(false);
+             resetForm();
              props.handleClose();
+
             },
             (error)=>{
                 setIsLoading(false);
                 console.log('FAILED...', error);
             })
-
-         resetForm();
+        }
     }
 
     const resetForm=()=> {
