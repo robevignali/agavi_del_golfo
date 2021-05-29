@@ -83,8 +83,13 @@ const Pricing=(props)=>{
                             <Button 
                                 
                                 onClick={()=>{
-                                    const preCompText="Hello Word";
-                                    setPrecompiledForm({title: preCompText});
+                                    // const preCompText="Hello Word";
+                                    // setPrecompiledForm({title: preCompText});
+                                    setPrecompiledForm({
+                                        title: "I've choice the Special Offer !",
+                                        text_1: "One weak for 100€ per day and 3.00€ per additional guest (up to 6 guest)",
+                                        text_2: "Turist tax not included"
+                                    });
                                     openMailForm();
                                 }} 
                                 variant="secondary"
@@ -108,8 +113,12 @@ const Pricing=(props)=>{
                             <Button 
                                 // style={{ margin: '50px'}}
                                 onClick={()=>{
-                                    const preCompText="Te Pae";
-                                    setPrecompiledForm({title: preCompText});
+                                    // const preCompText="Te Pae";
+                                    setPrecompiledForm({
+                                        title: "I've choice the Tailor Made Offer !",
+                                        text_1: "Contact me for a special price (up to 6 guest)",
+                                        text_2: "Turist tax not included"
+                                    });
                                     openMailForm();
                                 }} 
                                 variant="secondary"
