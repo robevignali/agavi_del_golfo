@@ -11,6 +11,7 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import emailjs from 'emailjs-com';
 import Spinner from 'react-bootstrap/Spinner';
+import Alert from 'react-bootstrap/Alert'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Card } from 'react-bootstrap';
@@ -27,6 +28,8 @@ const Emailform = props =>{
     const [startDate, setStartDate] = useState(new Date);
     const [stopDate, setStopDate] = useState(new Date);
     const [validated, setValidated] = useState(false);
+    const [showWarning, setShowWarning] = useState(false);
+    const [warningMessage, setWarningMessage] = useState(null);
 
     const handleSubmit=(e)=> {
         e.preventDefault();
@@ -63,14 +66,17 @@ const Emailform = props =>{
             templateParams,
             'user_1c42fyO9mldeRDtsAIOqU'
          ).then((res)=>{
-             setIsLoading(false);
-             resetForm();
-             props.handleClose();
+                setIsLoading(false);
+                setShowWarning(false);
+                setWarningMessage(null);
+                resetForm();
+                props.handleClose();
 
             },
             (error)=>{
                 setIsLoading(false);
-                console.log('FAILED...', error);
+                setShowWarning(true);
+                setWarningMessage(error.text);
             })
         }
     }
@@ -84,7 +90,6 @@ const Emailform = props =>{
     }
 
     return (
-
         <Modal 
         show={props.isOpen} 
         onHide={props.handleClose}
@@ -179,13 +184,21 @@ const Emailform = props =>{
                                     }
                                 </Button>
                             </div>
-
-                            </Form>
+                        </Form>
                         </Card.ImgOverlay>
                     </Card.Body>
                 </Card>
+
             </Modal.Body>
-            
+            {showWarning ?
+                <Alert variant="danger" onClose={() => setShowWarning(false)} dismissible >
+                <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+                    <p>
+                    {warningMessage}
+                    </p>
+                </Alert>
+                : null
+            }   
         </Modal>
 
     )
