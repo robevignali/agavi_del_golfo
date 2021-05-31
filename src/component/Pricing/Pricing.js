@@ -41,7 +41,7 @@ const Pricing=(props)=>{
                 <Col className='d-md-block d-sm-none'></Col>
             </Row>
             <Row >
-                <Col sm={12} md={4}>
+                <Col xs={8} sm={8} md={4} className='mx-auto'>
                     <Card className={classes.card}>
                         <Card.Header>
                             <h3 className={classes.card_head}>CLASSIC OFFER</h3>
@@ -69,7 +69,7 @@ const Pricing=(props)=>{
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col sm={12} md={4}>
+                <Col xs={8} sm={8} md={4} className='mx-auto'>
                     <Card className={classes.card}>
                         <Card.Header>
                             <h3 className={classes.card_head}>SPECIAL OFFER</h3>
@@ -99,7 +99,7 @@ const Pricing=(props)=>{
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col sm={12} md={4}>
+                <Col xs={8} sm={8} md={4} className='mx-auto'>
                     <Card className={classes.card}>
                         <Card.Header>
                             <h3 className={classes.card_head}>TAILOR MADE</h3>
