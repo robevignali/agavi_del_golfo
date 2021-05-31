@@ -56,13 +56,13 @@ const StayInTouch = props => {
         <Divider/>
         <Container>
             <Row>
-                <Col></Col>
-                <Col><h1 className={classes.title}>Contact Us</h1></Col>
-                <Col></Col>
+                <Col className='d-md-block d-sm-none'/>
+                <Col sm md={12} lg={8}><h1 className={classes.title}>Contact Us</h1></Col>
+                <Col className='d-md-block d-sm-none'/>
             </Row>
             <Row>
-                <Col></Col>
-                <Col>
+                <Col className='d-md-block d-sm-none'/>
+                <Col xs={6} sm={6} md={4} lg={4} xl={4} className='mx-auto'>
                     <Form className={classes.form} onSubmit={handleSubmit}>
                         
                         <Form.Group controlId="formGridEmail">
@@ -102,7 +102,7 @@ const StayInTouch = props => {
                         </Button>
                     </Form>
                 </Col>
-                <Col></Col>
+                <Col className='d-md-block d-sm-none'/>
             </Row>               
         </Container>
         </div>
