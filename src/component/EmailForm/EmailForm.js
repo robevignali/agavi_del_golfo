@@ -164,7 +164,8 @@ const Emailform = props =>{
 
                                 <Form.Group controlId="message">
                                     <Form.Control 
-                                        as="textarea" 
+                                        as="textarea"
+                                        required 
                                         rows={3} 
                                         placeholder="Send us a text"
                                         onChange={(e)=>{setMessage(e.target.value)}}
