@@ -33,10 +33,8 @@ const Emailform = props =>{
 
     const handleSubmit=(e)=> {
         e.preventDefault();
-        const form = e.currentTarget;
-
-        if (form.checkValidity() === false) {
-            // e.preventDefault();
+        
+        if (e.currentTarget.checkValidity() === false) {
             e.stopPropagation();
             setValidated(true);
         }else{
