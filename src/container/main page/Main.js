@@ -104,6 +104,7 @@ class App extends Component {
             images={this.state.secondFeaturetteData}
             map={true}
             places={agavi_place}
+            mapHeight={'400px'}
             map_center={agavi_coord}
             map_zoom={13}
             infoWindow_pict={agavi_pict}
@@ -122,12 +123,11 @@ class App extends Component {
             images={this.state.thirdFeaturetteData}
             surroundingMap={true}
             places={places}
+            mapHeight={'600px'}
             map_center={agavi_coord}
             map_zoom={10}            
           />
-          {/* <div className={classes.divider}/> */}
           <Pricing id="pricing"/>
-          {/* <div className={classes.divider}/> */}
           <StayInTouch id="getInTouch"/>
           <Footer/>
       </div>

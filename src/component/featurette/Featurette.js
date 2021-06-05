@@ -1,3 +1,4 @@
+
 import React from 'react';
 import classes from "../component.module.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -63,7 +64,7 @@ const featurette=(props)=>(
     </Row>
     {props.map?
         <Map
-            height={'400px'}
+            height={props.mapHeight}
             width={'100%'}
             places={props.places}
             center={props.map_center}
@@ -73,7 +74,7 @@ const featurette=(props)=>(
     :null}
     {props.surroundingMap?
         <SurroundingMap
-            height={'400px'}
+            height={props.mapHeight}
             width={'100%'}
             places={props.places}
             center={props.map_center}
