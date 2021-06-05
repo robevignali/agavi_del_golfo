@@ -20,18 +20,45 @@ const PlaceModal = (props) =>(
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
+        {props.place.text1?
           <div className={classes.modalText1}>
             <Image className={classes.modalText1Image} src={props.place.text_image1} roundedCircle/>
             {props.place.text1}
           </div>
+          : null
+        }
+        {props.place.text2?
           <div className={classes.modalText2}>
             <Image className={classes.modalText2Image} src={props.place.text_image2} rounded/>
             {props.place.text2}  
           </div>
+        : null
+        }
+        {props.place.text3?
           <div className={classes.modalText3}>
             <Image className={classes.modalText3Image} src={props.place.text_image3} rounded/>
             {props.place.text3}  
           </div>
+          : null
+        }
+        {props.place.link1?
+        <div className={classes.link}>
+         <a href={props.place.link1}>{props.place.link1}</a>
+        </div>
+        : null
+        }
+        {props.place.link2?
+        <div className={classes.link}>
+          {props.place.link1}
+        </div>
+        : null
+        }
+        {props.place.link3?
+        <div className={classes.link}>
+          {props.place.link1}
+        </div>
+        : null
+        }
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={props.onHide}>Close</Button>

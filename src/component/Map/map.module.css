@@ -110,3 +110,21 @@
     margin-left: 20px;
 }
 
+.link{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: x-large;
+    text-align: justify;
+    font-weight: 700;
+    line-height: 1.7;
+}
+.link a{
+    
+    color: #7a7f7c;
+}
+.link a:hover{
+    
+    color: #88b18a;
+    text-decoration: none;
+}
+
