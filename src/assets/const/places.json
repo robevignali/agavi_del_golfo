@@ -30,6 +30,34 @@
 			"text3": "Da segnalare le spiagge del lato nordovest dell'Isola Palmaria, citate peraltro nella Guida Blu del Touring Club Italiano e Legambiente. Sul borgo antico del paese, sulla falesia e sulle isole dell'arcipelago insiste il parco naturale regionale di Porto Venere, gestito dall'omonimo ufficio comunale.",
 			"text_image3": "https://firebasestorage.googleapis.com/v0/b/agavi-del-golfo-image-storage.appspot.com/o/surrounding%2FPortovenere%202.JPG?alt=media&token=0507a2d8-17a9-4516-bb5c-ed84081a2ab5",
 			"photo" : "https://firebasestorage.googleapis.com/v0/b/agavi-del-golfo-image-storage.appspot.com/o/surrounding%2FPortovenere%202.JPG?alt=media&token=0507a2d8-17a9-4516-bb5c-ed84081a2ab5"
+		},
+		{
+			"formatted_address": "Carrara MS, Italy",
+			"geometry": {
+				"location": {
+					"lat": 44.0839052,
+					"lng": 10.1241112
+				},
+				"viewport": {
+					"northeast": {
+						"lat": 44.0852541802915,
+						"lng": 10.1254601802915
+					},
+					"southwest": {
+						"lat": 44.0825562197085,
+						"lng": 10.1227622197085
+					}
+				}
+			},
+			"name": "Cava Museo Fantiscritti",
+			"place_id": "ChIJr3wuJMsP1RIROvZNysgNP2E",
+			"url": "https://maps.google.com/?q=Via+Miseglia+Fantiscritti,+54033+Carrara+MS,+Italy&ftid=0x12d50fcb242e7caf:0x613f0dc8ca4df63a",
+			"text1": "Cava Museo Fantiscritti is located in the heart of marble quarries in Carrara. Created by Walter Danesi, after 40 years of research, the museum is set in a wonderful landscape surrounded by the famous white marble that makes this place full of history and men’s sacrifice..Since ancient times,  and especially during the Roman Empire, the white marble quarries of Carrara have been used for the extraction of this precious material that, with its brightness, enriches buildings and monuments around the world",
+			"text_image1": "https://firebasestorage.googleapis.com/v0/b/agavi-del-golfo-image-storage.appspot.com/o/surrounding%2FIMG_0596.JPG?alt=media&token=66b8b4b2-499a-48c5-a324-d5488177844a",
+			"text2": "Not to mention the most famous Italian sculptors who used the Carrara marble to shape their statues and art crafts, like Michelangelo who visited the quarries to personally choose the blocks that best suited his work. Michelangelo believed that the sculptor’s task was basically to remove the superfluous from the blocks as the shapes were already within, only trapped in the marble.",
+			"text_image2": "https://firebasestorage.googleapis.com/v0/b/agavi-del-golfo-image-storage.appspot.com/o/surrounding%2FIMG_0572.JPG?alt=media&token=9e96c80e-a824-4f05-9a6f-d89b87efd055",
+			"link1": "http://cavamuseo.com/",
+			"photo" : "https://firebasestorage.googleapis.com/v0/b/agavi-del-golfo-image-storage.appspot.com/o/surrounding%2FIMG_0576.JPG?alt=media&token=832593e2-3aeb-44ff-aece-0f7355f977f7"
 		}
 		
 	]
