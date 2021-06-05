@@ -28,7 +28,7 @@ const StayInTouch = props => {
         setShowWarning(true);
         window.setTimeout(()=>{
             setShowWarning(false)
-        },4000)
+        },6000)
     }
 
     const onShowSuccess=(text)=>{
