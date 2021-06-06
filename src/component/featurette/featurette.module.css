@@ -1,0 +1,36 @@
+.feature__container{
+    padding: 20px;
+  }
+
+  .feature__text {
+    height: 400px;
+  }
+  .feature__text h1,h2,h3,h4,h5 {
+    font-family: 'Playfair Display', serif;
+  }
+  .feature__text h1 {
+    color: #000000ab;
+  }
+  .feature__text h2 {
+    color: #00000094;
+  }
+  .feature__text h5 {
+    color: #0000009e;
+    text-align: justify;
+    margin-top: 30px;
+  }
+
+  .feature__overlay {
+    margin-left: auto;
+    margin-right: auto;
+    height: 450px;
+    width: 450px;
+    opacity: 0.2;
+    
+  }
+
+
+  .feature__image{
+    width: 400px;
+    height: 400px;
+  }

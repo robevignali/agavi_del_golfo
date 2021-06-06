@@ -3,7 +3,7 @@ import firebase from 'firebase/app';
 import classes from './Main.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Slideshow from '../../component/slideshow/Slideshow';
-import Footer from '../../component/Footer';
+import Footer from '../../component/Footer/Footer';
 import HighlightStrip from '../../component/HighlightStrip/HighlightStrip';
 import Featurette from '../../component/featurette/Featurette';
 import agavi_place from '../../assets/const/agavi_del_golfo.json';

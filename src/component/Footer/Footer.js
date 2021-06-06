@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from "./component.module.css"
+import classes from "./footer.module.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 const footer=(props)=>(
