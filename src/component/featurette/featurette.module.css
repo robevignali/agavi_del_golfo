@@ -8,6 +8,7 @@
   .feature__text h1,h2,h3,h4,h5 {
     font-family: 'Playfair Display', serif;
   }
+
   .feature__text h1 {
     color: #000000ab;
   }
@@ -34,3 +35,28 @@
     width: 400px;
     height: 400px;
   }
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+    .feature__text h1 {
+        font-size: xx-large;
+    }
+    .feature__text h5 {
+      font-size: larger;
+      margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .feature__text h5 {
+        margin-top: 60px;
+      }
+}
+
+@media screen and (max-width: 768px) {
+    .feature__text h1 {
+        font-size: xx-large;
+    }
+    .feature__text h5 {
+      font-size: larger;
+    }
+}
