@@ -1,11 +1,9 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import mapStyles from './mapStyles.json';
-import classes from "./map.module.css";
-import PlaceModal from "./PlaceModal";
-// import Modal from 'react-bootstrap/Modal';
-// import Button from 'react-bootstrap/Button';
-// import Image from 'react-bootstrap/Image';
+import classes from "./sorroundMap.module.css";
+import PlaceModal from "../placeModal/PlaceModal";
+
 
 const Map=(props)=>{
 
@@ -78,40 +76,6 @@ const Map=(props)=>{
     });
 
   };
-
-  // const MyVerticallyCenteredModal = (props) =>(
-  //   <Modal 
-  //       {...props}
-  //       size="lg"
-  //       aria-labelledby="contained-modal-title-vcenter"
-  //       centered
-  //     >
-  //       <Modal.Header closeButton>
-  //         <Modal.Title id="contained-modal-title-vcenter">
-  //           <div className={classes.modalTitle}>{placeToShow.name}</div>
-  //           <div className={classes.modalSubTitle}>{placeToShow.formatted_address}</div>
-  //         </Modal.Title>
-  //       </Modal.Header>
-  //       <Modal.Body>
-  //         <div className={classes.modalText1}>
-  //           <Image className={classes.modalText1Image} src={placeToShow.text_image1} roundedCircle/>
-  //           {placeToShow.text1}
-  //         </div>
-  //         <div className={classes.modalText2}>
-  //           <Image className={classes.modalText2Image} src={placeToShow.text_image2} rounded/>
-  //           {placeToShow.text2}  
-  //         </div>
-  //         <div className={classes.modalText3}>
-  //           <Image className={classes.modalText3Image} src={placeToShow.text_image3} rounded/>
-  //           {placeToShow.text3}  
-  //         </div>
-  //       </Modal.Body>
-  //       <Modal.Footer>
-  //         <Button variant="secondary" onClick={props.onHide}>Close</Button>
-  //       </Modal.Footer>
-  //   </Modal>
-  // )
-  
 
     return (
         <div style={

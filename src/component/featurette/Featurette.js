@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col"
 import Card from "react-bootstrap/Card"
 import Slideshow from '../slideshow/Slideshow';
 import Map from '../Map/Map';
-import SurroundingMap from '../Map/SorroundMap';
+import SurroundingMap from '../sorroundMap/SorroundMap';
 import Divider from "../Divider/Divider";
 
 const featurette=(props)=>(

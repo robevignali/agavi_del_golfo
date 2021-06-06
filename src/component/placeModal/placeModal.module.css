@@ -1,41 +1,4 @@
-.infoWindow{
-    text-align: center;
-}
 
-
-.infoWindow_image{
-    width: 150px;
-    height: 80px;
-}
-
-.infoWindow_title{
-    font-size: 20px;
-    font-family: 'Dancing Script';
-    color: #88b18a
-}
-
-.infoWindow_text{
-    font-size: 12px;
-    font-family: 'Playfair Display';
-    color: #000000b5;
-    width: 130px;
-}
-
-.agaviGreatPlace{
-    width: 200px;
-    font-family: 'Dancing Script', cursive;
-    font-size: x-large;
-    color: #f44336;
-    position: relative;
-    right: 80px;
-    bottom: 3px;
-    text-shadow: -1px -1px 0 #f90f0f, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-}
-
-/* .popup{
-    text-align: center;
-    color: #f44336;
-}
 
 .modalTitle{
     display: inline;
@@ -127,4 +90,4 @@
     color: #88b18a;
     text-decoration: none;
 }
- */
+

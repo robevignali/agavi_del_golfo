@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from "./map.module.css";
+import classes from "./sorroundMap.module.css";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';

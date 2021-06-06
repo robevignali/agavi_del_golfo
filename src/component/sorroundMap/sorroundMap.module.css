@@ -1,0 +1,23 @@
+.infoWindow{
+    text-align: center;
+}
+
+
+.infoWindow_image{
+    width: 150px;
+    height: 80px;
+}
+
+.infoWindow_title{
+    font-size: 20px;
+    font-family: 'Dancing Script';
+    color: #88b18a
+}
+
+.infoWindow_text{
+    font-size: 12px;
+    font-family: 'Playfair Display';
+    color: #000000b5;
+    width: 130px;
+}
+
