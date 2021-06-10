@@ -27,7 +27,6 @@
 
 
 .modalText1Image{
-    float: right;
     width: 200px;
     height: 200px;
     margin: 20px;
@@ -46,13 +45,10 @@
 
 
 .modalText2Image{
-    float: left;
     width: 200px;
     height: 200px;
-
-    margin: 10px;
-    margin-right: 20px;
-}
+    margin: 30px;
+ }
 
 .modalText3{
     margin-top: 20px;
@@ -66,11 +62,10 @@
 
 
 .modalText3Image{
-    float: right;
-    width: 250px;
-    height: 150px;
-    margin: 10px;
-    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    
 }
 
 .link{
@@ -86,8 +81,33 @@
     color: #7a7f7c;
 }
 .link a:hover{
-    
     color: #88b18a;
     text-decoration: none;
 }
 
+@media screen and (max-width: 992px) {
+    .modalText1{
+        font-size:medium;
+    }
+    .modalText2{
+        font-size:medium;
+    }
+    .modalText3{
+        font-size:medium;
+    }
+    .modalText1Image{
+        width: 150px;
+        height: 150px;
+    }
+    .modalText2Image, .modalText3Image{
+        width: 150px;
+        height: 150px;
+    }
+    .modalTitle{
+        font-size: xx-large;
+    }
+    .modalSubTitle{
+        font-size:small;
+    }
+
+}
