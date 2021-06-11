@@ -15,13 +15,15 @@ import agave from '../../assets/images/agave.jpg';
 const highlightStrip=(props)=>(
     <div id={props.id}>
     <Container className={classes.highlightStrip}>
+
         <div className={classes.highlightStrip__title}>
-            <h1 className={classes.highlightStrip__title__text}>
-                Our Team is our Family
-            </h1>
+            <div className={classes.highlightStrip__title__text}>
+                <h1>Our Team is our Family</h1>
+            </div>
         </div>
+
         <Row>
-            <Col lg={4}>
+            <Col lg={4} md={4} >
                 <Image 
                     className={classes.highlightStrip__image} 
                     src={felicita}
@@ -33,13 +35,13 @@ const highlightStrip=(props)=>(
                 <Card.ImgOverlay>
                     <Card.Title className={classes.highlightStrip__name}>Felicita</Card.Title>
                     <Card.Text className={classes.highlightStrip__text}>
-                    <h5>{props.text1}</h5>
+                    <h4>{props.text1}</h4>
                     </Card.Text>
                 </Card.ImgOverlay>    
                 </Card.Body>
                 </Card>
             </Col>
-            <Col lg={4}>
+            <Col lg={4} md={4}>
                 <Image 
                     className={classes.highlightStrip__image}
                     src={ombretta}
@@ -51,13 +53,13 @@ const highlightStrip=(props)=>(
                     <Card.ImgOverlay>
                         <Card.Title className={classes.highlightStrip__name}>Ombretta</Card.Title>
                         <Card.Text className={classes.highlightStrip__text}>
-                        <h5>{props.text2}</h5>
+                        <h4>{props.text2}</h4>
                         </Card.Text>
                     </Card.ImgOverlay>   
                 </Card.Body>
                 </Card>
             </Col>
-            <Col lg={4}>
+            <Col lg={4} md={4}>
                 <Image 
                     className={classes.highlightStrip__image}
                     src={lulu}
@@ -69,7 +71,7 @@ const highlightStrip=(props)=>(
                 <Card.ImgOverlay>
                     <Card.Title className={classes.highlightStrip__name}>Lulu</Card.Title>
                     <Card.Text className={classes.highlightStrip__text}>
-                    <h5>{props.text3}</h5>
+                    <h4>{props.text3}</h4>
                     </Card.Text>
                 </Card.ImgOverlay>   
                 </Card.Body>

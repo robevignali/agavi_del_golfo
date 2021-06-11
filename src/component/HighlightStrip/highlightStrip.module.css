@@ -1,8 +1,7 @@
 
 .highlightStrip__title{
-    width: 50%;
+
     margin: auto;
-  
     align-items: center;
     padding: 10px;
 
@@ -20,24 +19,19 @@
 
     font-family: 'Playfair Display', serif;
     text-align: justify;
- 
     color:#484a46ad;
   
 }
   
 .highlightStrip__name{
     font-size: xx-large;
-    
     font-family: 'Playfair Display', serif;
-  
     color: #484a46d4;
 }
   
 .highlightStrip{
-      text-align: center;
-      padding-left: 80px;
-      padding-right: 80px;
-      margin-top: 80px;
+    text-align: center;
+    margin-top: 80px;
       
 }
     
@@ -48,7 +42,29 @@
 }
 
 .highlightStrip__overlay {
-
-    opacity: 0.2;
+    padding-top: 50px;
+    opacity: 0.20;
     
-  }
+}
+
+@media screen and (max-width: 992px) {
+    .highlightStrip__image{
+        width: 200px;
+        height: 200px;
+    }
+    .highlightStrip__text h4{
+        font-size:large;
+    }
+    .highlightStrip__overlay{
+        padding-top: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .highlightStrip__overlay {
+        padding-top: 0px;
+        width: 200px;
+        height: 250px;
+    }
+}
+
