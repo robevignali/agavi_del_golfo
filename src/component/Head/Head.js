@@ -53,7 +53,7 @@ const Head=(props)=>{
 
   return (
     
-    <Navbar  variant="dark" expand="lg" fixed={navbar.position} className={classes.background}>
+    <Navbar  variant="dark" expand="xl" fixed={navbar.position} className={classes.background}>
       <Navbar.Brand >
         <Image
           className={classes.navbar} 
