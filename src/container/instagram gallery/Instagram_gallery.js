@@ -16,7 +16,7 @@ class Instagram extends Component {
         }
 
     componentDidMount() {
-        const acessToken='IGQVJWaUhOQk5JU1EyS2g4al9oeW1iUjdKR3VOWDhncVZADcldPXzJNbHJWT3lXUklDY0lVaHBqOTRBc1RuZAE1fNEN6RE53UzFSOEZAuZAWpENm16amdreDR1ZAm05ZAEhpYWhZAM3pUMURSN3dabWs4c3A1VAZDZD'
+        const acessToken='IGQVJVNjhLbHhTY05xMTVPMjlOX3d4MzRZAM2dzU1VrZAWMzWFctWEJlajRwM3J5TW9lZAjdGRFVmYzY4SmdtSE91LUtyZAXFjeGlHSUwtYnhuclp4NDdsRzN2YnhUVERjNTBVOTRGLXlGZA1ZAKMmlHV2o5egZDZD'
         axios.get('me/media?fields=id,caption&access_token='+acessToken+'&limit=10')
         .then(res =>{
             
