@@ -1,11 +1,12 @@
 import React from 'react';
-import classes from "./gallery_apartment.module.css"
+import classes from "./gallery_apartment.module.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import Modal from "../../component/Modal/Modal"
+import Modal from "../../component/Modal/Modal";
+import Head from "../../component/Head gallery/Head";
 
 const Gallery=(props)=> {
     
@@ -53,6 +54,8 @@ const Gallery=(props)=> {
     );
 
     return (
+    <>
+    <Head/>   
     <div className={classes.gallery}>
         <Modal 
             isOpen={modalOpen} 
@@ -72,6 +75,7 @@ const Gallery=(props)=> {
             </Row>
         </Container>
     </div>
+    </>
     )
 }
 export default Gallery;

@@ -12,6 +12,7 @@ import places from '../../assets/const/places.json';
 import agavi_pict from "../../assets/images/agavi_ext_square.jpg";
 import Pricing from "../../component/Pricing/Pricing";
 import StayInTouch from "../../component/StayInTouch/StayInTouch"
+import Head from "../../component/Head/Head";
 
 class App extends Component {
   state = { 
@@ -60,7 +61,9 @@ class App extends Component {
 
   render() {
 
-    return (  
+    return (
+    <>  
+      <Head/>
       <div className={classes.app}>
         <div style={{height:'105px', backgroundColor: '#88b18a'}}></div>
           <Slideshow
@@ -131,6 +134,7 @@ class App extends Component {
           <StayInTouch id="getInTouch"/>
           <Footer/>
       </div>
+    </>
     );
     
   }
