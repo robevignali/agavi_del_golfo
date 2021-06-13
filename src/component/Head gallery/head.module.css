@@ -1,0 +1,49 @@
+  .background {
+    background-color: #88b18a;
+  }
+
+  .brand__title{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .brand__text {
+      vertical-align: middle;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      padding-right: 0px;
+      padding-left: 20px;
+      font-family: 'Dancing Script', cursive;
+      font-size: xxx-large;
+      transition: all 0.2s linear;
+    }
+  
+  .brand__text__mini{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    padding-left: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: x-large;
+    transition: all 0.2s linear;
+  }
+  
+  .brand__subtext {
+    padding-left: 60px;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .brand__subtext__null {
+    padding-left: 0px;
+    font-size: 0%;
+  }
+
+  .brand__link {
+    font-family: 'Playfair Display', serif;
+    font-size:120%;
+  }
+
+  .navbar{
+    transition: all 0.2s linear;
+  }
+
