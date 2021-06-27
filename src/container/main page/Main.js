@@ -13,7 +13,7 @@ import agavi_pict from "../../assets/images/agavi_ext_square.jpg";
 import Pricing from "../../component/Pricing/Pricing";
 import StayInTouch from "../../component/StayInTouch/StayInTouch"
 import Head from "../../component/Head/Head";
-// import Widget from "../../component/Whatsapp_widget/WhatsappWidget";
+import Widget from "../../component/fb_widget/MessengerWidget";
 
 class App extends Component {
   state = { 
@@ -64,7 +64,7 @@ class App extends Component {
 
     return (
     <>
-      {/* <Widget/> */}
+      <Widget/>
       <Head/>
       <div className={classes.app}>
         <div style={{height:'105px', backgroundColor: '#88b18a'}}></div>
